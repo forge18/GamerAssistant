@@ -1,14 +1,37 @@
-﻿using System.Data.Common;
-using Abp.Zero.EntityFramework;
+﻿using Abp.Zero.EntityFramework;
+using GamerAssistant.Admin;
 using GamerAssistant.Authorization.Roles;
 using GamerAssistant.Authorization.Users;
+using GamerAssistant.Events;
+using GamerAssistant.Games;
 using GamerAssistant.MultiTenancy;
+using GamerAssistant.Users;
+using System.Data.Common;
+using System.Data.Entity;
 
 namespace GamerAssistant.EntityFramework
 {
     public class GamerAssistantDbContext : AbpZeroDbContext<Tenant, Role, User>
     {
         //TODO: Define an IDbSet for your Entities...
+        public virtual IDbSet<GameCategory> GameCategories { get; set; }
+        public virtual IDbSet<GameMechanic> GameMechanics { get; set; }
+        public virtual IDbSet<GameTheme> GameThemes { get; set; }
+
+        public virtual IDbSet<Event> Events { get; set; }
+        public virtual IDbSet<EventAttachment> EventAttachments { get; set; }
+        public virtual IDbSet<EventDateOption> EventDateOptions { get; set; }
+        public virtual IDbSet<EventGame> EventGames { get; set; }
+        public virtual IDbSet<EventTask> EventTasks { get; set; }
+        public virtual IDbSet<EventUser> EventUsers { get; set; }
+
+        public virtual IDbSet<Game> Games { get; set; }
+        public virtual IDbSet<GameExpansion> GameExpansions { get; set; }
+        public virtual IDbSet<GameImage> GameImages { get; set; }
+        public virtual IDbSet<GamePlayDate> GamePlayDates { get; set; }
+
+        public virtual IDbSet<UserFavorite> UserFavorites { get; set; }
+        public virtual IDbSet<UserVote> UserVotes { get; set; }
 
         /* NOTE: 
          *   Setting "Default" to base class helps us when working migration commands on Package Manager Console.

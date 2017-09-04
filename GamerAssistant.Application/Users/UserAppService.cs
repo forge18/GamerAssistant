@@ -1,7 +1,3 @@
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Threading.Tasks;
 using Abp.Application.Services;
 using Abp.Application.Services.Dto;
 using Abp.Authorization;
@@ -14,6 +10,10 @@ using GamerAssistant.Authorization.Users;
 using GamerAssistant.Roles.Dto;
 using GamerAssistant.Users.Dto;
 using Microsoft.AspNet.Identity;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace GamerAssistant.Users
 {
@@ -23,17 +23,24 @@ namespace GamerAssistant.Users
         private readonly UserManager _userManager;
         private readonly RoleManager _roleManager;
         private readonly IRepository<Role> _roleRepository;
+        private readonly IRepository<UserFavorite> _userFavoriteRepository;
+        private readonly IRepository<UserVote> _userVoteRepository;
 
         public UserAppService(
-            IRepository<User, long> repository, 
-            UserManager userManager, 
-            IRepository<Role> roleRepository, 
-            RoleManager roleManager)
+            IRepository<User, long> repository,
+            UserManager userManager,
+            IRepository<Role> roleRepository,
+            RoleManager roleManager,
+            IRepository<UserFavorite> userFavoriteRepository,
+            IRepository<UserVote> userVoteRepository
+            )
             : base(repository)
         {
             _userManager = userManager;
             _roleRepository = roleRepository;
             _roleManager = roleManager;
+            _userFavoriteRepository = userFavoriteRepository;
+            _userVoteRepository = userVoteRepository;
         }
 
         public override async Task<UserDto> Get(EntityDto<long> input)
