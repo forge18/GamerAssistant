@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace GamerAssistant.Web.Models.Events
 {
-    public class EventViewModel
+    public class EventListViewModel
     {
-        public EventViewModel()
+        public EventListViewModel()
         {
             Attachments = new List<Attachment>();
             DateOptions = new List<DateOption>();

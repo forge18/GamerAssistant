@@ -2716,11 +2716,20 @@
     </Content>
     <Content Include="Views\Account\_TenantChange.js" />
     <Content Include="Views\Account\_TenantChangeModal.js" />
+    <Content Include="Views\Admin\AdminCategories\AdminCategories.js" />
+    <Content Include="Views\Admin\AdminMechanics\AdminMechanics.js" />
+    <Content Include="Views\Admin\AdminThemes\AdminThemes.js" />
+    <Content Include="Views\Events\EventList\EventList.js" />
+    <Content Include="Views\Events\EventScheduler\EventScheduler.js" />
+    <Content Include="Views\Friends\FriendList\FriendList.js" />
+    <Content Include="Views\GameLibrary\GameList\GameList.js" />
+    <Content Include="Views\GameLibrary\GameMaintenance\GameMaintenance.js" />
     <Content Include="Views\Home\Index.js" />
     <Content Include="Views\Roles\Index.js" />
     <Content Include="Views\Roles\_EditRoleModal.js" />
     <Content Include="Views\Shared\_Layout.css" />
     <Content Include="Views\Shared\_Layout.js" />
+    <Content Include="Views\Tasks\TaskList\TaskList.js" />
     <Content Include="Views\Tenants\Index.js" />
     <Content Include="Views\Tenants\_EditTenantModal.js" />
     <Content Include="Views\Users\Index.js" />
@@ -2741,9 +2750,14 @@
     <Compile Include="App_Start\Startup.cs" />
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\EventsController.cs" />
+    <Compile Include="Controllers\FriendsController.cs" />
+    <Compile Include="Controllers\GameLibraryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\Results\ChallengeResult.cs" />
     <Compile Include="Controllers\RolesController.cs" />
+    <Compile Include="Controllers\TasksController.cs" />
     <Compile Include="Controllers\TenantsController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Helpers\HtmlHelpers.cs" />
@@ -2751,8 +2765,9 @@
     <Compile Include="Models\Account\TenantChangeViewModel.cs" />
     <Compile Include="Models\Admin\AdminViewModel.cs" />
     <Compile Include="Models\Common\Modals\ModalHeaderViewModel.cs" />
-    <Compile Include="Models\Events\EventViewModel.cs" />
-    <Compile Include="Models\Games\GameListViewModel.cs" />
+    <Compile Include="Models\Events\EventListViewModel.cs" />
+    <Compile Include="Models\Friends\FriendListViewModel.cs" />
+    <Compile Include="Models\GameLibrary\GameLibraryViewModel.cs" />
     <Compile Include="Models\Layout\RightSideBarViewModel.cs" />
     <Compile Include="Models\Account\LoginFormViewModel.cs" />
     <Compile Include="Models\Account\LoginViewModel.cs" />
@@ -2769,6 +2784,7 @@
     <Compile Include="Models\Layout\SideBarUserAreaViewModel.cs" />
     <Compile Include="Models\Roles\EditRoleModalViewModel.cs" />
     <Compile Include="Models\Roles\RoleListViewModel.cs" />
+    <Compile Include="Models\Tasks\TaskListViewModel.cs" />
     <Compile Include="Models\Users\EditUserModalViewModel.cs" />
     <Compile Include="Models\Users\UserListViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -2888,6 +2904,20 @@
     <Content Include="Views\Roles\Index.cshtml" />
     <Content Include="Views\Roles\_EditRoleModal.cshtml" />
     <Content Include="Views\Tenants\_EditTenantModal.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Events\Index.cshtml" />
+    <Content Include="Views\Friends\Index.cshtml" />
+    <Content Include="Views\GameLibrary\Index.cshtml" />
+    <Content Include="Views\Tasks\Index.cshtml" />
+    <Content Include="Views\Admin\AdminCategories\_AdminCategories.cshtml" />
+    <Content Include="Views\Admin\AdminMechanics\_AdminMechanics.cshtml" />
+    <Content Include="Views\Admin\AdminThemes\_AdminThemes.cshtml" />
+    <Content Include="Views\Events\EventList\_EventList.cshtml" />
+    <Content Include="Views\Events\EventScheduler\_EventScheduler.cshtml" />
+    <Content Include="Views\Friends\FriendList\_FriendList.cshtml" />
+    <Content Include="Views\GameLibrary\GameList\_GameList.cshtml" />
+    <Content Include="Views\GameLibrary\GameMaintenance\_GameMaintenance.cshtml" />
+    <Content Include="Views\Tasks\TaskList\_TaskList.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
