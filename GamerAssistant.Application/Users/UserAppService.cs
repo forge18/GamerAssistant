@@ -24,6 +24,8 @@ namespace GamerAssistant.Users
         private readonly RoleManager _roleManager;
         private readonly IRepository<Role> _roleRepository;
         private readonly IRepository<UserFavorite> _userFavoriteRepository;
+        private readonly IRepository<UserFriend> _userFriendRepository;
+        private readonly IRepository<UserGame> _userGameRepository;
         private readonly IRepository<UserVote> _userVoteRepository;
 
         public UserAppService(
@@ -32,6 +34,8 @@ namespace GamerAssistant.Users
             IRepository<Role> roleRepository,
             RoleManager roleManager,
             IRepository<UserFavorite> userFavoriteRepository,
+            IRepository<UserFriend> userFriendRepository,
+            IRepository<UserGame> userGameRepository,
             IRepository<UserVote> userVoteRepository
             )
             : base(repository)
@@ -40,6 +44,8 @@ namespace GamerAssistant.Users
             _roleRepository = roleRepository;
             _roleManager = roleManager;
             _userFavoriteRepository = userFavoriteRepository;
+            _userFriendRepository = userFriendRepository;
+            _userGameRepository = userGameRepository;
             _userVoteRepository = userVoteRepository;
         }
 
@@ -135,5 +141,96 @@ namespace GamerAssistant.Users
         {
             identityResult.CheckErrors(LocalizationManager);
         }
+
+        public IList<UserFavorite> GetFavoritesById(int userId)
+        {
+            var userFavorites = _userFavoriteRepository.GetAll().ToList();
+            if (userFavorites == null)
+                return null;
+
+            return userFavorites;
+        }
+
+        public IList<UserFriend> GetFriendsById(int userId)
+        {
+            var userFriends = _userFriendRepository.GetAll().ToList();
+            if (userFriends == null)
+                return null;
+
+            return userFriends;
+        }
+
+        public IList<UserGame> GetGamesById(int userId)
+        {
+            var userGames = _userGameRepository.GetAll().ToList();
+            if (userGames == null)
+                return null;
+
+            return userGames;
+        }
+
+        public IList<UserVote> GetAllVotesById(int userId)
+        {
+            var userVotes = _userVoteRepository.GetAll().ToList();
+            if (userVotes == null)
+                return null;
+
+            return userVotes;
+        }
+
+        public IList<UserVote> GetUpcomingVotesById(int userId)
+        {
+            var userVotes = _userVoteRepository.GetAll().ToList();
+            if (userVotes == null)
+                return null;
+
+            return userVotes;
+        }
+
+        public void AddFavoriteById(UserFavorite favorite)
+        {
+            _userFavoriteRepository.Insert(favorite);
+        }
+
+        public void DeleteFavorite(int gameId)
+        {
+            _userFavoriteRepository.Delete(gameId);
+        }
+
+        public void AddFriendById(UserFriend friend)
+        {
+            _userFriendRepository.Insert(friend);
+        }
+
+        public void DeleteFriendById(int userId)
+        {
+            _userFriendRepository.Delete(userId);
+        }
+
+        public void AddGameToUser(UserGame userGame)
+        {
+            _userGameRepository.Insert(userGame);
+        }
+
+        public void DeleteGameFromUser(int userGameId)
+        {
+            _userGameRepository.Delete(userGameId);
+        }
+
+        public void AddVoteToUser(UserVote userVote)
+        {
+            _userVoteRepository.Insert(userVote);
+        }
+
+        public void UpdateVote(UserVote userVote)
+        {
+            _userVoteRepository.Update(userVote);
+        }
+
+        public void DeleteVoteById(int userVoteId)
+        {
+            _userVoteRepository.Delete(userVoteId);
+        }
+
     }
 }

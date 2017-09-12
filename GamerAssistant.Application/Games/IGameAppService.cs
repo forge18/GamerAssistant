@@ -1,30 +1,33 @@
 ﻿using Abp.Application.Services;
-using System;
 using System.Collections.Generic;
 
 namespace GamerAssistant.Games
 {
     public interface IGameAppService : IApplicationService
     {
-        IList<Game> GetGamesList();
+        IList<Game> GetGamesMasterList();
 
-        IList<GameExpansion> GetExpansionByGameId();
+        IList<GameExpansion> GetExpansionsByGameId(int gameId);
 
-        IList<GameImage> GetImageByGameId();
+        IList<GameImage> GetImagesByGameId(int gameId);
 
-        IList<GamePlayDate> GetPlayDatesByGameId();
+        IList<GamePlayDate> GetPlayDatesByGameId(int gameId);
 
-        void AddGame(Game game);
+        void AddGameMaster(Game game);
 
-        void DeleteGame(int gameId);
+        void UpdateGameMaster(Game game);
 
-        void AddExpansionByGameId(GameExpansion expansion);
+        void DeleteGameMasterById(int gameId);
+
+        void AddExpansion(GameExpansion expansion);
+
+        void UpdateExpansion(GameExpansion expansion);
 
         void DeleteExpansionById(int expansionId);
 
         void UpdateImageByGameId(int gameId, string imageLink);
 
-        void AddPlayDate(int gameId, DateTime playDate);
+        void AddPlayDateById(GamePlayDate gamePlayDate);
 
         void DeletePlayDateById(int playDateId);
     }

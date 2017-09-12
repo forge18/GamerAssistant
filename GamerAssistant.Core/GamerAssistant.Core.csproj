@@ -156,6 +156,8 @@
     <Compile Include="Authorization\Users\UserManager.cs" />
     <Compile Include="Authorization\Users\UserStore.cs" />
     <Compile Include="Users\UserFavorite.cs" />
+    <Compile Include="Users\UserFriend.cs" />
+    <Compile Include="Users\UserGame.cs" />
     <Compile Include="Users\UserVote.cs" />
     <Compile Include="Validation\ValidationHelper.cs" />
   </ItemGroup>

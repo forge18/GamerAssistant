@@ -13,14 +13,20 @@ namespace GamerAssistant.Admin
 
         void AddCategory(GameCategory category);
 
-        void DeleteCategory(int categoryId);
+        void UpdateCategory(GameCategory category);
+
+        void DeleteCategoryById(int categoryId);
 
         void AddMechanic(GameMechanic mechanic);
 
-        void DeleteMechanic(int mechanicId);
+        void UpdateMechanic(GameMechanic mechanic);
+
+        void DeleteMechanicById(int mechanicId);
 
         void AddTheme(GameTheme theme);
 
-        void DeleteTheme(int themeId);
+        void UpdateTheme(GameTheme theme);
+
+        void DeleteThemeById(int themeId);
     }
 }

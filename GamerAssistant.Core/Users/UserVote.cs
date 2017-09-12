@@ -16,6 +16,9 @@ namespace GamerAssistant.Users
         [Column("event_game_id")]
         public int EventGameId { get; set; }
 
+        [Column("due_date")]
+        public DateTime DueDate { get; set; }
+
         [Column("vote")]
         public VoteStatus Vote { get; set; }
 

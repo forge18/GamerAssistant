@@ -1,5 +1,4 @@
 ﻿using Abp.Application.Services;
-using System;
 using System.Collections.Generic;
 
 namespace GamerAssistant.Events
@@ -8,40 +7,42 @@ namespace GamerAssistant.Events
     {
         IList<Event> GetEventsList();
 
-        IList<EventAttachment> GetAttachmentsByEventId();
+        IList<EventAttachment> GetAttachmentsByEventId(int eventId);
 
-        IList<EventDateOption> GetDateOptiosnByEventId();
+        IList<EventDateOption> GetDateOptionsByEventId(int eventId);
 
-        IList<EventGame> GetGamesByEventId();
+        IList<EventGame> GetGamesByEventId(int eventId);
 
-        IList<EventTask> GetTasksByEventId();
+        IList<EventTask> GetTasksByEventId(int eventId);
 
-        IList<EventUser> GetUsersByEventId();
+        IList<EventUser> GetUsersByEventId(int eventId);
 
         void AddEvent(Event eventItem);
 
-        void CancelEvent(int eventId);
+        void UpdateEvent(Event eventItem);
 
-        void AddAttachmentByEventId(int eventId, string link);
+        void CancelEventById(int eventId);
 
-        void DeleteAttachmentById(int attachmentId);
+        void AddAttachmentToEvent(EventAttachment eventAttachment);
 
-        void AddDateOptionByEventId(int eventId, DateTime dateOption);
+        void DeleteAttachmentFromEventById(int attachmentId);
 
-        void DeleteDateOptionById(int dateOptionEventId);
+        void AddDateOptionToEvent(EventDateOption dateOption);
 
-        void AddGameByEventId(int eventId, int gameId);
+        void DeleteDateOptionFromEventById(int dateOptionEventId);
 
-        void DeleteGameById(int gameEventId);
+        void AddGameToEvent(EventGame eventGame);
 
-        void AddTaskByEventId(int eventId, EventTask task);
+        void DeleteGameFromEventById(int eventGameId);
 
-        void UpdateTaskByEventId(int eventId, EventTask task);
+        void AddTask(EventTask task);
 
-        void DeleteTaskById(int gameEventId);
+        void UpdateTask(EventTask task);
 
-        void AddUserByEventId(int eventId, int userId);
+        void DeleteTaskById(int taskId);
 
-        void DeleteUserById(int userEventId);
+        void AddUserToEvent(EventUser eventUser);
+
+        void DeleteUserFromEventById(int eventUserId);
     }
 }

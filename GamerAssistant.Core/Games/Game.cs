@@ -42,9 +42,6 @@ namespace GamerAssistant.Games
 
         [Column("added_on")]
         public DateTime AddedOn { get; set; }
-
-        [Column("owner_id")]
-        public int OwnerId { get; set; }
     }
 
     public enum GameType : int
