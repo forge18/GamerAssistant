@@ -9,7 +9,7 @@ namespace GamerAssistant.Events
 
         IList<EventAttachment> GetAttachmentsByEventId(int eventId);
 
-        IList<EventDateOption> GetDateOptionsByEventId(int eventId);
+        IList<EventProposal> GetDateOptionsByEventId(int eventId);
 
         IList<EventGame> GetGamesByEventId(int eventId);
 
@@ -27,7 +27,7 @@ namespace GamerAssistant.Events
 
         void DeleteAttachmentFromEventById(int attachmentId);
 
-        void AddDateOptionToEvent(EventDateOption dateOption);
+        void AddDateOptionToEvent(EventProposal dateOption);
 
         void DeleteDateOptionFromEventById(int dateOptionEventId);
 
@@ -44,5 +44,7 @@ namespace GamerAssistant.Events
         void AddUserToEvent(EventUser eventUser);
 
         void DeleteUserFromEventById(int eventUserId);
+
+        //Get play dates from EventGame
     }
 }

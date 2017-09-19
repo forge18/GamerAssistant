@@ -6,13 +6,13 @@ namespace GamerAssistant.Games
 {
     public class GameAppService : IGameAppService
     {
-        private readonly IRepository<Game> _gameRepository;
+        private readonly IRepository<TabletopGame> _gameRepository;
         private readonly IRepository<GameExpansion> _gameExpansionRepository;
         private readonly IRepository<GameImage> _gameImageRepository;
         private readonly IRepository<GamePlayDate> _gamePlayDateRepository;
 
         public GameAppService(
-            IRepository<Game> gameRepository,
+            IRepository<TabletopGame> gameRepository,
             IRepository<GameExpansion> gameExpansionRepository,
             IRepository<GameImage> gameImageRepository,
             IRepository<GamePlayDate> gamePlayDateRepository
@@ -24,7 +24,7 @@ namespace GamerAssistant.Games
             _gamePlayDateRepository = gamePlayDateRepository;
         }
 
-        public IList<Game> GetGamesMasterList()
+        public IList<TabletopGame> GetGamesMasterList()
         {
             var games = _gameRepository.GetAll().ToList();
             if (games == null)
@@ -63,12 +63,12 @@ namespace GamerAssistant.Games
             return gamePlayDates;
         }
 
-        public void AddGameMaster(Game game)
+        public void AddGameMaster(TabletopGame game)
         {
             _gameRepository.Insert(game);
         }
 
-        public void UpdateGameMaster(Game game)
+        public void UpdateGameMaster(TabletopGame game)
         {
             _gameRepository.Update(game);
         }

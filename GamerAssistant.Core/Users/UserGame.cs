@@ -10,11 +10,11 @@ namespace GamerAssistant.Users
         [Column("user_id")]
         public int UserId { get; set; }
 
-        [Column("game_id")]
-        public int GameId { get; set; }
+        [Column("tabletop_game_id")]
+        public int TabletopGameId { get; set; }
 
-        [Column("expansion_id")]
-        public int ExpansionId { get; set; }
+        [Column("video_game_id")]
+        public int VideoGameId { get; set; }
 
         [Column("added_on")]
         public DateTime AddedOn { get; set; }

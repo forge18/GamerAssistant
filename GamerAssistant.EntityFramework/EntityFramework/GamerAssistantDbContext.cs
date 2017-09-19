@@ -1,5 +1,4 @@
 ﻿using Abp.Zero.EntityFramework;
-using GamerAssistant.Admin;
 using GamerAssistant.Authorization.Roles;
 using GamerAssistant.Authorization.Users;
 using GamerAssistant.Events;
@@ -14,23 +13,31 @@ namespace GamerAssistant.EntityFramework
     public class GamerAssistantDbContext : AbpZeroDbContext<Tenant, Role, User>
     {
         //TODO: Define an IDbSet for your Entities...
-        public virtual IDbSet<GameCategory> GameCategories { get; set; }
-        public virtual IDbSet<GameMechanic> GameMechanics { get; set; }
-        public virtual IDbSet<GameTheme> GameThemes { get; set; }
-
         public virtual IDbSet<Event> Events { get; set; }
         public virtual IDbSet<EventAttachment> EventAttachments { get; set; }
-        public virtual IDbSet<EventDateOption> EventDateOptions { get; set; }
+        public virtual IDbSet<EventProposal> EventDateOptions { get; set; }
         public virtual IDbSet<EventGame> EventGames { get; set; }
         public virtual IDbSet<EventTask> EventTasks { get; set; }
         public virtual IDbSet<EventUser> EventUsers { get; set; }
 
-        public virtual IDbSet<Game> Games { get; set; }
-        public virtual IDbSet<GameExpansion> GameExpansions { get; set; }
-        public virtual IDbSet<GameImage> GameImages { get; set; }
-        public virtual IDbSet<GamePlayDate> GamePlayDates { get; set; }
+        public virtual IDbSet<TabletopCategory> TabletopCategories { get; set; }
+        public virtual IDbSet<TabletopGame> TabletopGames { get; set; }
+        public virtual IDbSet<TabletopGameCategory> TabletopGameCategories { get; set; }
+        public virtual IDbSet<TabletopGameExpansion> TabletopGameExpansions { get; set; }
+        public virtual IDbSet<TabletopGameMechanic> TabletopGameMechanics { get; set; }
+        public virtual IDbSet<TabletopMechanic> TabletopMechanics { get; set; }
+        public virtual IDbSet<VideoCategory> VideoCategories { get; set; }
+        public virtual IDbSet<VideoGame> VideoGames { get; set; }
+        public virtual IDbSet<VideoGameCategory> VideoGameCategories { get; set; }
+        public virtual IDbSet<VideoGameGenre> VideoGameGenres { get; set; }
+        public virtual IDbSet<VideoGamePlatform> VideoGamePlatforms { get; set; }
+        public virtual IDbSet<VideoGenre> VideoGenres { get; set; }
+        public virtual IDbSet<VideoPlatform> VideoPlatforms { get; set; }
 
         public virtual IDbSet<UserFavorite> UserFavorites { get; set; }
+        public virtual IDbSet<UserFriend> UserFriends { get; set; }
+        public virtual IDbSet<UserGame> UserGames { get; set; }
+        public virtual IDbSet<UserSource> UserSources { get; set; }
         public virtual IDbSet<UserVote> UserVotes { get; set; }
 
         /* NOTE: 

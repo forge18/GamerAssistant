@@ -8,7 +8,7 @@ namespace GamerAssistant.Events
     {
         private readonly IRepository<Event> _eventRepository;
         private readonly IRepository<EventAttachment> _eventAttachmentRepository;
-        private readonly IRepository<EventDateOption> _eventDateOptionRepository;
+        private readonly IRepository<EventProposal> _eventDateOptionRepository;
         private readonly IRepository<EventGame> _eventGameRepository;
         private readonly IRepository<EventTask> _eventTaskRepository;
         private readonly IRepository<EventUser> _eventUserRepository;
@@ -16,7 +16,7 @@ namespace GamerAssistant.Events
         public EventAppService(
             IRepository<Event> eventRepository,
             IRepository<EventAttachment> eventAttachmentRepository,
-            IRepository<EventDateOption> eventDateOptionRepository,
+            IRepository<EventProposal> eventDateOptionRepository,
             IRepository<EventGame> eventGameRepository,
             IRepository<EventTask> eventTaskRepository,
             IRepository<EventUser> eventUserRepository
@@ -48,7 +48,7 @@ namespace GamerAssistant.Events
             return attachments;
         }
 
-        public IList<EventDateOption> GetDateOptionsByEventId(int eventId)
+        public IList<EventProposal> GetDateOptionsByEventId(int eventId)
         {
             var dateOptions = _eventDateOptionRepository.GetAll().ToList();
             if (dateOptions == null)
@@ -109,7 +109,7 @@ namespace GamerAssistant.Events
             _eventAttachmentRepository.Delete(attachmentId);
         }
 
-        public void AddDateOptionToEvent(EventDateOption dateOption)
+        public void AddDateOptionToEvent(EventProposal dateOption)
         {
             _eventDateOptionRepository.Insert(dateOption);
         }

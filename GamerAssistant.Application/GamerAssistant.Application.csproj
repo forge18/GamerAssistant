@@ -117,8 +117,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin\AdminAppService.cs" />
-    <Compile Include="Admin\IAdminAppService.cs" />
     <Compile Include="Events\EventAppService.cs" />
     <Compile Include="Events\IEventAppService.cs" />
     <Compile Include="GamerAssistantApplicationModule.cs" />

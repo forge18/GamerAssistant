@@ -119,12 +119,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin\GameCategory.cs" />
-    <Compile Include="Admin\GameMechanic.cs" />
-    <Compile Include="Admin\GameTheme.cs" />
     <Compile Include="Events\Event.cs" />
     <Compile Include="Events\EventAttachment.cs" />
-    <Compile Include="Events\EventDateOption.cs" />
+    <Compile Include="Events\EventProposal.cs" />
     <Compile Include="Events\EventGame.cs" />
     <Compile Include="Events\EventTask.cs" />
     <Compile Include="Events\EventUser.cs" />
@@ -142,10 +139,19 @@
     <Compile Include="Configuration\AppSettingProvider.cs" />
     <Compile Include="Editions\EditionManager.cs" />
     <Compile Include="Features\FeatureValueStore.cs" />
-    <Compile Include="Games\Game.cs" />
-    <Compile Include="Games\GameExpansion.cs" />
-    <Compile Include="Games\GamePlayDate.cs" />
-    <Compile Include="Games\GameImage.cs" />
+    <Compile Include="Games\TabletopCategory.cs" />
+    <Compile Include="Games\TabletopGame.cs" />
+    <Compile Include="Games\TabletopGameCategory.cs" />
+    <Compile Include="Games\TabletopGameExpansion.cs" />
+    <Compile Include="Games\TabletopGameMechanic.cs" />
+    <Compile Include="Games\TabletopMechanic.cs" />
+    <Compile Include="Games\VideoCategory.cs" />
+    <Compile Include="Games\VideoGame.cs" />
+    <Compile Include="Games\VideoGameCategory.cs" />
+    <Compile Include="Games\VideoGameGenre.cs" />
+    <Compile Include="Games\VideoGamePlatform.cs" />
+    <Compile Include="Games\VideoGenre.cs" />
+    <Compile Include="Games\VideoPlatform.cs" />
     <Compile Include="MultiTenancy\Tenant.cs" />
     <Compile Include="MultiTenancy\TenantManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -158,6 +164,7 @@
     <Compile Include="Users\UserFavorite.cs" />
     <Compile Include="Users\UserFriend.cs" />
     <Compile Include="Users\UserGame.cs" />
+    <Compile Include="Users\UserSource.cs" />
     <Compile Include="Users\UserVote.cs" />
     <Compile Include="Validation\ValidationHelper.cs" />
   </ItemGroup>
