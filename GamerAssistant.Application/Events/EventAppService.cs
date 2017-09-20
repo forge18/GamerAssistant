@@ -39,6 +39,15 @@ namespace GamerAssistant.Events
             return events;
         }
 
+        public IList<EventGame> GetEventsByGameId(int gameId)
+        {
+            var gameEvents = _eventGameRepository.GetAll().Where(x => x.GameId == gameId).ToList();
+            if (gameEvents == null)
+                return null;
+
+            return gameEvents;
+        }
+
         public IList<EventAttachment> GetAttachmentsByEventId(int eventId)
         {
             var attachments = _eventAttachmentRepository.GetAll().ToList();

@@ -231,6 +231,5 @@ namespace GamerAssistant.Users
         {
             _userVoteRepository.Delete(userVoteId);
         }
-
     }
 }

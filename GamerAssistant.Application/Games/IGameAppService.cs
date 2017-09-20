@@ -26,25 +26,25 @@ namespace GamerAssistant.Games
 
         void AddTabletopGameCategory(TabletopGameCategory gameCategory);
 
-        void DeleteToptopGameCategoryById(int id);
+        void DeleteTabletopGameCategoryById(int gameCategoryId);
 
         void AddTabletopGameMechanic(TabletopGameMechanic gameMechanic);
 
-        void DeleteTabletopGameMechanicById(int id);
+        void DeleteTabletopGameMechanicById(int gameMechanicId);
 
         void AddTabletopGameExpansion(TabletopGameExpansion game);
 
-        void DeleteToptopGameExpansionById(int id);
+        void DeleteTabletopGameExpansionById(int gameExpansionId);
 
 
         //Video Game Interfaces
         IList<VideoGame> GetVideoGamesList();
 
-        IList<VideoGamePlatform> GetVideoPlatformsByGameId(int gameId);
+        IList<VideoGamePlatform> GetVideoGamePlatformsByGameId(int gameId);
 
-        IList<VideoGameCategory> GetVideoCategoriesByGameId(int gameId);
+        IList<VideoGameCategory> GetVideoGameCategoriesByGameId(int gameId);
 
-        IList<VideoGameGenre> GetVideoGenressByGameId(int gameId);
+        IList<VideoGameGenre> GetVideoGameGenresByGameId(int gameId);
 
         IList<VideoPlatform> GetVideoPlatforms();
 
@@ -60,14 +60,14 @@ namespace GamerAssistant.Games
 
         void AddVideoGameCategory(VideoGameCategory gameCategory);
 
-        void DeleteVideoGameCategoryById(int id);
+        void DeleteVideoGameCategoryById(int gameCategoryId);
 
         void AddVideoGameGenre(VideoGameGenre gameGenre);
 
-        void DeleteVideoGameGenreById(int id);
+        void DeleteVideoGameGenreById(int gameGenreId);
 
         void AddVideoGamePlatform(VideoGamePlatform gamePlatform);
 
-        void DeleteVideoGamePlatformById(int id);
+        void DeleteVideoGamePlatformById(int gamePlatformId);
     }
 }

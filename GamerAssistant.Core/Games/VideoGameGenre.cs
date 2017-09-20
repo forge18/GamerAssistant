@@ -1,6 +1,8 @@
-﻿namespace GamerAssistant.Games
+﻿using Abp.Domain.Entities;
+
+namespace GamerAssistant.Games
 {
-    public class VideoGameGenre
+    public class VideoGameGenre : Entity
     {
         public int GameId { get; set; }
 

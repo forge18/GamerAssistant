@@ -20,9 +20,6 @@ namespace GamerAssistant.Users
         //Get game list by user id
         IList<UserGame> GetGamesById(int userId);
 
-        //Get source list by user id
-        IList<UserSource> GetSourcesById(int userId);
-
         //Get all votes by user id
         IList<UserVote> GetAllVotesById(int userId);
 
@@ -46,12 +43,6 @@ namespace GamerAssistant.Users
 
         //Delete game
         void DeleteGameFromUser(int userGameId);
-
-        //Add source
-        void AddSourceToUser(UserSource userSource);
-
-        //Delete Source
-        void DeleteSourceById(int userSourceId);
 
         //Add vote
         void AddVoteToUser(UserVote userVote);

@@ -161,10 +161,16 @@
     <Compile Include="Authorization\Users\User.cs" />
     <Compile Include="Authorization\Users\UserManager.cs" />
     <Compile Include="Authorization\Users\UserStore.cs" />
+    <Compile Include="Sources\BggGameDetail.cs" />
+    <Compile Include="Sources\SteamGameDetail.cs" />
+    <Compile Include="Sources\SteamGameSearch.cs" />
+    <Compile Include="Sources\BggGameSearch.cs" />
+    <Compile Include="Sources\BggGameCollection.cs" />
+    <Compile Include="Sources\SteamGameCollection.cs" />
     <Compile Include="Users\UserFavorite.cs" />
     <Compile Include="Users\UserFriend.cs" />
     <Compile Include="Users\UserGame.cs" />
-    <Compile Include="Users\UserSource.cs" />
+    <Compile Include="Sources\UserSource.cs" />
     <Compile Include="Users\UserVote.cs" />
     <Compile Include="Validation\ValidationHelper.cs" />
   </ItemGroup>
