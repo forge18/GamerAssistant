@@ -10,34 +10,55 @@ namespace GamerAssistant.Sources
         {
             public string Type { get; set; }
 
-            public int Id { get; set; }
+            public string Id { get; set; }
 
             public string Thumbnail { get; set; }
 
             public string Image { get; set; }
 
-            public string NameType { get; set; }
-
-            public string NameValue { get; set; }
+            public List<Name> Names { get; set; }
 
             public string Description { get; set; }
 
-            public string YearPublished { get; set; }
+            public List<YearPublished> YearGamePublished { get; set; }
 
-            public int MinPlayers { get; set; }
+            public List<MinPlayers> MinGamePlayers { get; set; }
 
-            public int MaxPlayers { get; set; }
+            public List<MaxPlayers> MaxGamePlayers { get; set; }
 
             public List<Link> Links { get; set; }
+        }
+
+        public class MinPlayers
+        {
+            public string value { get; set; }
+        }
+
+        public class MaxPlayers
+        {
+            public string value { get; set; }
+        }
+
+        public class YearPublished
+        {
+            public string value { get; set; }
+        }
+
+        public class Name
+        {
+            public string Type { get; set; }
+
+            public string SortIndex { get; set; }
         }
 
         public class Link
         {
             public string Type { get; set; }
 
-            public int Id { get; set; }
+            public string Id { get; set; }
 
-            public string Value { get; set; }
+            public string value { get; set; }
         }
     }
 }
+

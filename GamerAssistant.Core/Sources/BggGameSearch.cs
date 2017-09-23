@@ -13,14 +13,25 @@ namespace GamerAssistant.Sources
 
     public class Item
     {
-        public string ItemType { get; set; }
+        public string Type { get; set; }
 
-        public int ItemId { get; set; }
+        public int Id { get; set; }
 
-        public string NameType { get; set; }
+        public List<Name> Names { get; set; }
 
-        public string NameValue { get; set; }
+        public List<YearPublished> YearGamePublished { get; set; }
+    }
 
-        public int YearPublishedValue { get; set; }
+    public class Name
+    {
+        public string Type { get; set; }
+
+        public string value { get; set; }
+    }
+
+    public class YearPublished
+    {
+        public string value { get; set; }
     }
 }
+

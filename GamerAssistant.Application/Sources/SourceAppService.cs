@@ -54,17 +54,19 @@ namespace GamerAssistant.Sources
                             //Send response data back to controller
                             var response = client.Execute<BggGameCollection>(request);
 
-                            if (response.ResponseStatus.ToString() == "200")
+                            if (response.StatusCode == System.Net.HttpStatusCode.OK)
                             {
                                 collection = response.Data;
                                 successfulCall = true;
                             }
-                            else if (response.ResponseStatus.ToString() == "204")
-                                successfulCall = true;
+                            else
+                            {
+                                successfulCall = false;
+                                Thread.Sleep(1000);
+                                elapsed += 1000;
+                            }
                         }
 
-                        Thread.Sleep(1000);
-                        elapsed += 1000;
                     }
 
                     return collection;
@@ -78,17 +80,94 @@ namespace GamerAssistant.Sources
             }
         }
 
-        public BggGameDetail GetGameDetailFromBgg(int gameId)
+        public BggGameDetail GetGameDetailFromBggByGameId(string gameIds)
         {
-            var game = new BggGameDetail();
+            var games = new BggGameDetail();
 
+            //Create the api url
+            var resource = "xmlapi2/thing?id=" + gameIds;
 
-            return game;
+            //Create a new client
+            var client = new RestClient();
+            //Give the client a base url
+            client.BaseUrl = new Uri("http://www.boardgamegeek.com");
+            //Create a new request
+            var request = new RestRequest();
+            //Stuff the api url into the request
+            request.Resource = resource;
+
+            var successfulCall = false;
+            //This will ensure that the api times out after ten seconds
+            TimeSpan timeSpan = DateTime.Now.AddSeconds(11) - DateTime.Now;
+            int elapsed = 0;
+            while (!successfulCall && elapsed < timeSpan.TotalMilliseconds)
+            {
+                //Api only gets called every five seconds for max of 3 times.
+                if (elapsed == 0 || elapsed == 5000 || elapsed == 1000)
+                {
+                    //Send response data back to controller
+                    var response = client.Execute<BggGameDetail>(request);
+
+                    if (response.StatusCode == System.Net.HttpStatusCode.OK)
+                    {
+                        games = response.Data;
+                        successfulCall = true;
+                    }
+                    else
+                    {
+                        successfulCall = false;
+                        Thread.Sleep(1000);
+                        elapsed += 1000;
+                    }
+                }
+
+            }
+
+            return games;
         }
 
         public BggGameSearch SearchBggGames(string gameName)
         {
             var results = new BggGameSearch();
+
+            //Create the api url
+            var resource = "xmlapi2/search?query=" + gameName;
+
+            //Create a new client
+            var client = new RestClient();
+            //Give the client a base url
+            client.BaseUrl = new Uri("http://www.boardgamegeek.com");
+            //Create a new request
+            var request = new RestRequest();
+            //Stuff the api url into the request
+            request.Resource = resource;
+
+            var successfulCall = false;
+            //This will ensure that the api times out after ten seconds
+            TimeSpan timeSpan = DateTime.Now.AddSeconds(11) - DateTime.Now;
+            int elapsed = 0;
+            while (!successfulCall && elapsed < timeSpan.TotalMilliseconds)
+            {
+                //Api only gets called every five seconds for max of 3 times.
+                if (elapsed == 0 || elapsed == 5000 || elapsed == 1000)
+                {
+                    //Send response data back to controller
+                    var response = client.Execute<BggGameSearch>(request);
+
+                    if (response.StatusCode == System.Net.HttpStatusCode.OK)
+                    {
+                        results = response.Data;
+                        successfulCall = true;
+                    }
+                    else
+                    {
+                        successfulCall = false;
+                        Thread.Sleep(1000);
+                        elapsed += 1000;
+                    }
+                }
+
+            }
 
             return results;
         }

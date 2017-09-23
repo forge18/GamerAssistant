@@ -145,6 +145,10 @@
     <Compile Include="Migrations\201709120155108_SetUpServices.Designer.cs">
       <DependentUpon>201709120155108_SetUpServices.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709222330237_ReconfigureSqlDatabase.cs" />
+    <Compile Include="Migrations\201709222330237_ReconfigureSqlDatabase.Designer.cs">
+      <DependentUpon>201709222330237_ReconfigureSqlDatabase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\AbpZeroDbMigrator.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="GamerAssistantDataModule.cs" />
@@ -178,6 +182,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709120155108_SetUpServices.resx">
       <DependentUpon>201709120155108_SetUpServices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709222330237_ReconfigureSqlDatabase.resx">
+      <DependentUpon>201709222330237_ReconfigureSqlDatabase.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

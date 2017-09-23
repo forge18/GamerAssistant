@@ -98,3 +98,5 @@ D:\src\GamerAssistant\GamerAssistant.Application\bin\Debug\System.Linq.Dynamic.C
 D:\src\GamerAssistant\GamerAssistant.Application\obj\Debug\GamerAssistant.Application.csprojResolveAssemblyReference.cache
 D:\src\GamerAssistant\GamerAssistant.Application\obj\Debug\GamerAssistant.Application.dll
 D:\src\GamerAssistant\GamerAssistant.Application\obj\Debug\GamerAssistant.Application.pdb
+D:\src\GamerAssistant\GamerAssistant.Application\bin\Debug\RestSharp.dll
+D:\src\GamerAssistant\GamerAssistant.Application\bin\Debug\RestSharp.xml

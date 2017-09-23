@@ -7,7 +7,7 @@ namespace GamerAssistant.Sources
     {
         BggGameCollection GetBggCollectionByUserId(int userId);
 
-        BggGameDetail GetGameDetailFromBgg(int gameId);
+        BggGameDetail GetGameDetailFromBggByGameId(string gameIds);
 
         BggGameSearch SearchBggGames(string gameName);
 

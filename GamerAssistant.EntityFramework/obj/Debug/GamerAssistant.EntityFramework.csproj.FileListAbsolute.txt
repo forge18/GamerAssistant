@@ -122,3 +122,4 @@ D:\src\GamerAssistant\GamerAssistant.EntityFramework\obj\Debug\GamerAssistant.En
 D:\src\GamerAssistant\GamerAssistant.EntityFramework\obj\Debug\GamerAssistant.EntityFramework.pdb
 D:\src\GamerAssistant\GamerAssistant.EntityFramework\obj\Debug\GamerAssistant.Migrations.InitialTables.resources
 D:\src\GamerAssistant\GamerAssistant.EntityFramework\obj\Debug\GamerAssistant.Migrations.SetUpServices.resources
+D:\src\GamerAssistant\GamerAssistant.EntityFramework\obj\Debug\GamerAssistant.Migrations.ReconfigureSqlDatabase.resources

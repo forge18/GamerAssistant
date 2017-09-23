@@ -178,3 +178,5 @@ D:\src\GamerAssistant\Tests\GamerAssistant.Tests\bin\Debug\xunit.core.pdb
 D:\src\GamerAssistant\Tests\GamerAssistant.Tests\bin\Debug\xunit.core.xml
 D:\src\GamerAssistant\Tests\GamerAssistant.Tests\bin\Debug\xunit.execution.desktop.pdb
 D:\src\GamerAssistant\Tests\GamerAssistant.Tests\bin\Debug\xunit.execution.desktop.xml
+D:\src\GamerAssistant\Tests\GamerAssistant.Tests\bin\Debug\RestSharp.dll
+D:\src\GamerAssistant\Tests\GamerAssistant.Tests\bin\Debug\RestSharp.xml

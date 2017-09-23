@@ -26,23 +26,7 @@ namespace GamerAssistant.Sources
 
             public string Thumbnail { get; set; }
 
-            public int MinPlayers { get; set; }
-
-            public int MaxPlayers { get; set; }
-
             public int NumPlays { get; set; }
-
-            public List<Link> Links { get; set; }
         }
-
-        public class Link
-        {
-            public string Type { get; set; }
-
-            public int Id { get; set; }
-
-            public string Value { get; set; }
-        }
-
     }
 }
