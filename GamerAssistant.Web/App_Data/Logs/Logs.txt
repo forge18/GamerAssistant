@@ -2269,3 +2269,409 @@ DEBUG 2017-09-24 11:58:24,776 [1    ] Abp.Logging.LogHelper                    -
 DEBUG 2017-09-24 11:58:24,777 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.Configuration.IConfigurationAppService' with service name 'app/configuration'.
 DEBUG 2017-09-24 11:58:24,778 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
 DEBUG 2017-09-24 11:58:24,779 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.Events.IEventAppService' with service name 'app/event'.
+DEBUG 2017-09-24 15:53:01,491 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-09-24 15:53:01,502 [1    ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
+DEBUG 2017-09-24 15:53:01,507 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: GamerAssistant.Web.GamerAssistantWebModule, GamerAssistant.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:53:01,508 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: GamerAssistant.GamerAssistantDataModule, GamerAssistant.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:53:01,509 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:53:01,509 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:53:01,509 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:53:01,509 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:53:01,509 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:53:01,509 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:53:01,509 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: GamerAssistant.GamerAssistantCoreModule, GamerAssistant.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:53:01,509 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: GamerAssistant.GamerAssistantApplicationModule, GamerAssistant.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:53:01,510 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:53:01,510 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: GamerAssistant.Api.GamerAssistantWebApiModule, GamerAssistant.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:53:01,510 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:53:01,510 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:53:01,510 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:53:01,510 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:53:01,510 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:53:01,513 [1    ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
+DEBUG 2017-09-24 15:53:01,620 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-09-24 15:53:01,620 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-09-24 15:53:01,620 [1    ] o.Configuration.LanguageManagementConfig - Converted GamerAssistant (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-09-24 15:53:01,620 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-09-24 15:53:01,878 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: GamerAssistant.EntityFramework.GamerAssistantDbContext, GamerAssistant.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:53:02,995 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-09-24 15:53:03,003 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-09-24 15:53:03,011 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-09-24 15:53:03,014 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: GamerAssistant
+DEBUG 2017-09-24 15:53:03,015 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-09-24 15:53:03,099 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-09-24 15:53:03,152 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 13 classes define auto mapping attributes
+DEBUG 2017-09-24 15:53:03,152 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2017-09-24 15:53:03,155 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Sessions.Dto.UserLoginInfoDto
+DEBUG 2017-09-24 15:53:03,155 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Users.Dto.CreateUserDto
+DEBUG 2017-09-24 15:53:03,155 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Users.Dto.UpdateUserDto
+DEBUG 2017-09-24 15:53:03,155 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Users.Dto.UserDto
+DEBUG 2017-09-24 15:53:03,155 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Roles.Dto.CreateRoleDto
+DEBUG 2017-09-24 15:53:03,155 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Roles.Dto.PermissionDto
+DEBUG 2017-09-24 15:53:03,155 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Roles.Dto.RoleDto
+DEBUG 2017-09-24 15:53:03,155 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2017-09-24 15:53:03,155 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.MultiTenancy.Dto.EditTenantDto
+DEBUG 2017-09-24 15:53:03,155 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.MultiTenancy.Dto.TenantDto
+DEBUG 2017-09-24 15:53:03,155 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Web.Models.Account.TenantChangeViewModel
+DEBUG 2017-09-24 15:53:03,155 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2017-09-24 15:53:04,629 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2017-09-24 15:53:04,632 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2017-09-24 15:53:04,634 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.Sources.ISourceAppService' with service name 'app/source'.
+DEBUG 2017-09-24 15:53:04,636 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2017-09-24 15:53:04,637 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2017-09-24 15:53:04,638 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.Games.IGameAppService' with service name 'app/game'.
+DEBUG 2017-09-24 15:53:04,639 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.Configuration.IConfigurationAppService' with service name 'app/configuration'.
+DEBUG 2017-09-24 15:53:04,640 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
+DEBUG 2017-09-24 15:53:04,641 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.Events.IEventAppService' with service name 'app/event'.
+DEBUG 2017-09-24 15:53:11,484 [9    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"c780604e-57d2-482e-9828-4ee98cc74829","IpAddress":"::1","TenantId":1,"UserId":3,"ConnectTime":"2017-09-24T15:53:11.4799925-05:00","Properties":{}}
+DEBUG 2017-09-24 15:53:11,509 [9    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: c780604e-57d2-482e-9828-4ee98cc74829
+DEBUG 2017-09-24 15:54:22,308 [23   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: c780604e-57d2-482e-9828-4ee98cc74829
+DEBUG 2017-09-24 15:54:22,861 [24   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"042d4523-07ec-4f6d-b3f2-730ec5b53ffd","IpAddress":"::1","TenantId":1,"UserId":3,"ConnectTime":"2017-09-24T15:54:22.861126-05:00","Properties":{}}
+DEBUG 2017-09-24 15:54:22,909 [23   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 042d4523-07ec-4f6d-b3f2-730ec5b53ffd
+DEBUG 2017-09-24 15:56:51,679 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-09-24 15:56:51,689 [1    ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
+DEBUG 2017-09-24 15:56:51,694 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: GamerAssistant.Web.GamerAssistantWebModule, GamerAssistant.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:56:51,695 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: GamerAssistant.GamerAssistantDataModule, GamerAssistant.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:56:51,695 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:56:51,695 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:56:51,695 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:56:51,696 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:56:51,696 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:56:51,696 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:56:51,696 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: GamerAssistant.GamerAssistantCoreModule, GamerAssistant.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:56:51,696 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: GamerAssistant.GamerAssistantApplicationModule, GamerAssistant.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:56:51,696 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:56:51,696 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: GamerAssistant.Api.GamerAssistantWebApiModule, GamerAssistant.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:56:51,696 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:56:51,697 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:56:51,697 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:56:51,697 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:56:51,697 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:56:51,699 [1    ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
+DEBUG 2017-09-24 15:56:51,796 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-09-24 15:56:51,796 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-09-24 15:56:51,796 [1    ] o.Configuration.LanguageManagementConfig - Converted GamerAssistant (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-09-24 15:56:51,796 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-09-24 15:56:52,086 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: GamerAssistant.EntityFramework.GamerAssistantDbContext, GamerAssistant.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:56:53,154 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-09-24 15:56:53,160 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-09-24 15:56:53,168 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-09-24 15:56:53,170 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: GamerAssistant
+DEBUG 2017-09-24 15:56:53,171 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-09-24 15:56:53,232 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-09-24 15:56:53,282 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 13 classes define auto mapping attributes
+DEBUG 2017-09-24 15:56:53,282 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2017-09-24 15:56:53,284 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Sessions.Dto.UserLoginInfoDto
+DEBUG 2017-09-24 15:56:53,284 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Users.Dto.CreateUserDto
+DEBUG 2017-09-24 15:56:53,285 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Users.Dto.UpdateUserDto
+DEBUG 2017-09-24 15:56:53,285 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Users.Dto.UserDto
+DEBUG 2017-09-24 15:56:53,285 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Roles.Dto.CreateRoleDto
+DEBUG 2017-09-24 15:56:53,285 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Roles.Dto.PermissionDto
+DEBUG 2017-09-24 15:56:53,285 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Roles.Dto.RoleDto
+DEBUG 2017-09-24 15:56:53,285 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2017-09-24 15:56:53,285 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.MultiTenancy.Dto.EditTenantDto
+DEBUG 2017-09-24 15:56:53,285 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.MultiTenancy.Dto.TenantDto
+DEBUG 2017-09-24 15:56:53,285 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Web.Models.Account.TenantChangeViewModel
+DEBUG 2017-09-24 15:56:53,285 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2017-09-24 15:56:54,570 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2017-09-24 15:56:54,571 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2017-09-24 15:56:54,572 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.Sources.ISourceAppService' with service name 'app/source'.
+DEBUG 2017-09-24 15:56:54,573 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2017-09-24 15:56:54,574 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2017-09-24 15:56:54,575 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.Games.IGameAppService' with service name 'app/game'.
+DEBUG 2017-09-24 15:56:54,576 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.Configuration.IConfigurationAppService' with service name 'app/configuration'.
+DEBUG 2017-09-24 15:56:54,576 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
+DEBUG 2017-09-24 15:56:54,577 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.Events.IEventAppService' with service name 'app/event'.
+DEBUG 2017-09-24 15:56:55,918 [12   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"279f988e-583b-4150-a42e-a2e972331378","IpAddress":"::1","TenantId":1,"UserId":3,"ConnectTime":"2017-09-24T15:56:55.9069513-05:00","Properties":{}}
+DEBUG 2017-09-24 15:57:01,750 [12   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"96711c54-359b-4f20-8a97-60aeb1b63681","IpAddress":"::1","TenantId":1,"UserId":3,"ConnectTime":"2017-09-24T15:57:01.7501842-05:00","Properties":{}}
+DEBUG 2017-09-24 15:57:01,870 [5    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 96711c54-359b-4f20-8a97-60aeb1b63681
+DEBUG 2017-09-24 15:57:20,399 [12   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 96711c54-359b-4f20-8a97-60aeb1b63681
+DEBUG 2017-09-24 15:57:20,850 [5    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 279f988e-583b-4150-a42e-a2e972331378
+DEBUG 2017-09-24 15:57:20,963 [5    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"1f927755-331e-49d1-91dc-dadb7eb221ad","IpAddress":"::1","TenantId":1,"UserId":3,"ConnectTime":"2017-09-24T15:57:20.9636963-05:00","Properties":{}}
+DEBUG 2017-09-24 15:57:20,973 [11   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 1f927755-331e-49d1-91dc-dadb7eb221ad
+DEBUG 2017-09-24 15:57:21,169 [11   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 1f927755-331e-49d1-91dc-dadb7eb221ad
+DEBUG 2017-09-24 15:57:21,496 [8    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"05392d31-e639-44c6-927b-c8c0e076d006","IpAddress":"::1","TenantId":1,"UserId":3,"ConnectTime":"2017-09-24T15:57:21.4965156-05:00","Properties":{}}
+DEBUG 2017-09-24 15:57:21,513 [16   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 05392d31-e639-44c6-927b-c8c0e076d006
+DEBUG 2017-09-24 15:57:22,189 [18   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"6ac98c8d-b515-4af7-be32-9c5cf1556f17","IpAddress":"::1","TenantId":1,"UserId":3,"ConnectTime":"2017-09-24T15:57:22.1892739-05:00","Properties":{}}
+DEBUG 2017-09-24 15:57:22,435 [11   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 05392d31-e639-44c6-927b-c8c0e076d006
+DEBUG 2017-09-24 15:57:22,933 [24   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"31cf783a-4477-49e0-87c7-ea496b04baf2","IpAddress":"::1","TenantId":1,"UserId":3,"ConnectTime":"2017-09-24T15:57:22.9331062-05:00","Properties":{}}
+DEBUG 2017-09-24 15:57:22,937 [25   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 31cf783a-4477-49e0-87c7-ea496b04baf2
+DEBUG 2017-09-24 15:57:22,987 [11   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 6ac98c8d-b515-4af7-be32-9c5cf1556f17
+DEBUG 2017-09-24 15:57:54,297 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-09-24 15:57:54,686 [1    ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
+DEBUG 2017-09-24 15:57:54,691 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: GamerAssistant.Web.GamerAssistantWebModule, GamerAssistant.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:57:54,693 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: GamerAssistant.GamerAssistantDataModule, GamerAssistant.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:57:54,693 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:57:54,693 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:57:54,693 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:57:54,693 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:57:54,693 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:57:54,694 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:57:54,694 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: GamerAssistant.GamerAssistantCoreModule, GamerAssistant.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:57:54,694 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: GamerAssistant.GamerAssistantApplicationModule, GamerAssistant.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:57:54,694 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:57:54,694 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: GamerAssistant.Api.GamerAssistantWebApiModule, GamerAssistant.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:57:54,694 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:57:54,694 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:57:54,695 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:57:54,695 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:57:54,695 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:57:54,697 [1    ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
+DEBUG 2017-09-24 15:57:55,258 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-09-24 15:57:55,259 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-09-24 15:57:55,259 [1    ] o.Configuration.LanguageManagementConfig - Converted GamerAssistant (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-09-24 15:57:55,259 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-09-24 15:57:55,572 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: GamerAssistant.EntityFramework.GamerAssistantDbContext, GamerAssistant.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 15:57:56,167 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-09-24 15:57:56,173 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-09-24 15:57:56,180 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-09-24 15:57:56,182 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: GamerAssistant
+DEBUG 2017-09-24 15:57:56,183 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-09-24 15:57:56,245 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-09-24 15:57:56,290 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 13 classes define auto mapping attributes
+DEBUG 2017-09-24 15:57:56,290 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2017-09-24 15:57:56,293 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Sessions.Dto.UserLoginInfoDto
+DEBUG 2017-09-24 15:57:56,293 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Users.Dto.CreateUserDto
+DEBUG 2017-09-24 15:57:56,294 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Users.Dto.UpdateUserDto
+DEBUG 2017-09-24 15:57:56,294 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Users.Dto.UserDto
+DEBUG 2017-09-24 15:57:56,294 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Roles.Dto.CreateRoleDto
+DEBUG 2017-09-24 15:57:56,294 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Roles.Dto.PermissionDto
+DEBUG 2017-09-24 15:57:56,294 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Roles.Dto.RoleDto
+DEBUG 2017-09-24 15:57:56,294 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2017-09-24 15:57:56,294 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.MultiTenancy.Dto.EditTenantDto
+DEBUG 2017-09-24 15:57:56,294 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.MultiTenancy.Dto.TenantDto
+DEBUG 2017-09-24 15:57:56,294 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Web.Models.Account.TenantChangeViewModel
+DEBUG 2017-09-24 15:57:56,294 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2017-09-24 15:57:57,402 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2017-09-24 15:57:57,403 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2017-09-24 15:57:57,403 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.Sources.ISourceAppService' with service name 'app/source'.
+DEBUG 2017-09-24 15:57:57,404 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2017-09-24 15:57:57,405 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2017-09-24 15:57:57,406 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.Games.IGameAppService' with service name 'app/game'.
+DEBUG 2017-09-24 15:57:57,407 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.Configuration.IConfigurationAppService' with service name 'app/configuration'.
+DEBUG 2017-09-24 15:57:57,407 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
+DEBUG 2017-09-24 15:57:57,408 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.Events.IEventAppService' with service name 'app/event'.
+WARN  2017-09-24 15:57:59,826 [10   ] Abp.Logging.LogHelper                    - Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.AsyncContext.<>c__DisplayClass15_0.<Run>b__0(Task t)
+   at System.Threading.Tasks.ContinuationTaskFromTask.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.AsyncContext.Run(Func`1 action)
+   at Abp.Authorization.AuthorizationHelperExtensions.Authorize(IAuthorizationHelper authorizationHelper, MethodInfo methodInfo, Type type)
+   at Abp.Web.Mvc.Authorization.AbpMvcAuthorizeFilter.OnAuthorization(AuthorizationContext filterContext)
+Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.AsyncContext.<>c__DisplayClass15_0.<Run>b__0(Task t)
+   at System.Threading.Tasks.ContinuationTaskFromTask.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.AsyncContext.Run(Func`1 action)
+   at Abp.Authorization.AuthorizationHelperExtensions.Authorize(IAuthorizationHelper authorizationHelper, MethodInfo methodInfo, Type type)
+   at Abp.Web.Mvc.Authorization.AbpMvcAuthorizeFilter.OnAuthorization(AuthorizationContext filterContext)
+DEBUG 2017-09-24 15:58:27,025 [4    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"ae2cd65a-380d-414a-a708-17ecbf7e9896","IpAddress":"::1","TenantId":1,"UserId":3,"ConnectTime":"2017-09-24T15:58:27.0194632-05:00","Properties":{}}
+DEBUG 2017-09-24 15:58:27,060 [12   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: ae2cd65a-380d-414a-a708-17ecbf7e9896
+DEBUG 2017-09-24 15:58:40,174 [14   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: ae2cd65a-380d-414a-a708-17ecbf7e9896
+DEBUG 2017-09-24 15:58:40,546 [16   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"751bbb96-3fa5-436a-820c-3d362cb33695","IpAddress":"::1","TenantId":1,"UserId":3,"ConnectTime":"2017-09-24T15:58:40.546504-05:00","Properties":{}}
+DEBUG 2017-09-24 15:58:40,608 [11   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 751bbb96-3fa5-436a-820c-3d362cb33695
+DEBUG 2017-09-24 16:01:43,551 [30   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 751bbb96-3fa5-436a-820c-3d362cb33695
+DEBUG 2017-09-24 16:01:44,271 [27   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"44eaf65d-e68e-4684-b0af-8c6c9a3117ce","IpAddress":"::1","TenantId":1,"UserId":3,"ConnectTime":"2017-09-24T16:01:44.2715006-05:00","Properties":{}}
+DEBUG 2017-09-24 16:01:44,291 [24   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 44eaf65d-e68e-4684-b0af-8c6c9a3117ce
+DEBUG 2017-09-24 16:01:48,099 [30   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 44eaf65d-e68e-4684-b0af-8c6c9a3117ce
+DEBUG 2017-09-24 16:01:49,086 [27   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"15df88b8-6af1-4353-bd44-388ab16701b5","IpAddress":"::1","TenantId":1,"UserId":3,"ConnectTime":"2017-09-24T16:01:49.0861217-05:00","Properties":{}}
+DEBUG 2017-09-24 16:01:49,116 [27   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 15df88b8-6af1-4353-bd44-388ab16701b5
+DEBUG 2017-09-24 16:01:55,243 [18   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 15df88b8-6af1-4353-bd44-388ab16701b5
+DEBUG 2017-09-24 16:01:55,966 [29   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"cc68e775-ceb4-47b2-ba10-cb4139ebff95","IpAddress":"::1","TenantId":1,"UserId":3,"ConnectTime":"2017-09-24T16:01:55.9669566-05:00","Properties":{}}
+DEBUG 2017-09-24 16:01:56,078 [28   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: cc68e775-ceb4-47b2-ba10-cb4139ebff95
+DEBUG 2017-09-24 16:05:03,666 [29   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: cc68e775-ceb4-47b2-ba10-cb4139ebff95
+DEBUG 2017-09-24 16:05:04,148 [29   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"feccb893-0acb-4153-b800-b8837b0008f7","IpAddress":"::1","TenantId":1,"UserId":3,"ConnectTime":"2017-09-24T16:05:04.1482353-05:00","Properties":{}}
+DEBUG 2017-09-24 16:05:04,164 [24   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: feccb893-0acb-4153-b800-b8837b0008f7
+DEBUG 2017-09-24 16:05:56,082 [29   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: feccb893-0acb-4153-b800-b8837b0008f7
+DEBUG 2017-09-24 16:12:27,383 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-09-24 16:12:27,393 [1    ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
+DEBUG 2017-09-24 16:12:27,398 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: GamerAssistant.Web.GamerAssistantWebModule, GamerAssistant.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:12:27,400 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: GamerAssistant.GamerAssistantDataModule, GamerAssistant.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:12:27,400 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:12:27,400 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:12:27,401 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:12:27,401 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:12:27,401 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:12:27,401 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:12:27,401 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: GamerAssistant.GamerAssistantCoreModule, GamerAssistant.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:12:27,401 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: GamerAssistant.GamerAssistantApplicationModule, GamerAssistant.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:12:27,401 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:12:27,401 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: GamerAssistant.Api.GamerAssistantWebApiModule, GamerAssistant.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:12:27,402 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:12:27,402 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:12:27,402 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:12:27,402 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:12:27,402 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:12:27,404 [1    ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
+DEBUG 2017-09-24 16:12:27,502 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-09-24 16:12:27,502 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-09-24 16:12:27,502 [1    ] o.Configuration.LanguageManagementConfig - Converted GamerAssistant (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-09-24 16:12:27,502 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-09-24 16:12:27,767 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: GamerAssistant.EntityFramework.GamerAssistantDbContext, GamerAssistant.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:12:28,796 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-09-24 16:12:28,803 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-09-24 16:12:28,811 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-09-24 16:12:28,813 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: GamerAssistant
+DEBUG 2017-09-24 16:12:28,814 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-09-24 16:12:28,878 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-09-24 16:12:28,925 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 13 classes define auto mapping attributes
+DEBUG 2017-09-24 16:12:28,925 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2017-09-24 16:12:28,928 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Sessions.Dto.UserLoginInfoDto
+DEBUG 2017-09-24 16:12:28,928 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Users.Dto.CreateUserDto
+DEBUG 2017-09-24 16:12:28,928 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Users.Dto.UpdateUserDto
+DEBUG 2017-09-24 16:12:28,928 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Users.Dto.UserDto
+DEBUG 2017-09-24 16:12:28,928 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Roles.Dto.CreateRoleDto
+DEBUG 2017-09-24 16:12:28,928 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Roles.Dto.PermissionDto
+DEBUG 2017-09-24 16:12:28,928 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Roles.Dto.RoleDto
+DEBUG 2017-09-24 16:12:28,928 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2017-09-24 16:12:28,928 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.MultiTenancy.Dto.EditTenantDto
+DEBUG 2017-09-24 16:12:28,928 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.MultiTenancy.Dto.TenantDto
+DEBUG 2017-09-24 16:12:28,928 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Web.Models.Account.TenantChangeViewModel
+DEBUG 2017-09-24 16:12:28,928 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2017-09-24 16:12:30,119 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2017-09-24 16:12:30,120 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2017-09-24 16:12:30,120 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.Sources.ISourceAppService' with service name 'app/source'.
+DEBUG 2017-09-24 16:12:30,121 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2017-09-24 16:12:30,122 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2017-09-24 16:12:30,122 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.Games.IGameAppService' with service name 'app/game'.
+DEBUG 2017-09-24 16:12:30,123 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.Configuration.IConfigurationAppService' with service name 'app/configuration'.
+DEBUG 2017-09-24 16:12:30,124 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
+DEBUG 2017-09-24 16:12:30,125 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.Events.IEventAppService' with service name 'app/event'.
+DEBUG 2017-09-24 16:14:45,570 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-09-24 16:14:45,581 [1    ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
+DEBUG 2017-09-24 16:14:45,586 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: GamerAssistant.Web.GamerAssistantWebModule, GamerAssistant.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:14:45,588 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: GamerAssistant.GamerAssistantDataModule, GamerAssistant.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:14:45,588 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:14:45,588 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:14:45,588 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:14:45,589 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:14:45,589 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:14:45,590 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:14:45,590 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: GamerAssistant.GamerAssistantCoreModule, GamerAssistant.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:14:45,590 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: GamerAssistant.GamerAssistantApplicationModule, GamerAssistant.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:14:45,590 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:14:45,590 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: GamerAssistant.Api.GamerAssistantWebApiModule, GamerAssistant.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:14:45,590 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:14:45,590 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:14:45,590 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:14:45,590 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:14:45,591 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:14:45,593 [1    ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
+DEBUG 2017-09-24 16:14:45,704 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-09-24 16:14:45,704 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-09-24 16:14:45,704 [1    ] o.Configuration.LanguageManagementConfig - Converted GamerAssistant (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-09-24 16:14:45,704 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-09-24 16:14:45,993 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: GamerAssistant.EntityFramework.GamerAssistantDbContext, GamerAssistant.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:14:47,219 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-09-24 16:14:47,226 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-09-24 16:14:47,233 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-09-24 16:14:47,235 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: GamerAssistant
+DEBUG 2017-09-24 16:14:47,236 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-09-24 16:14:47,301 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-09-24 16:14:47,355 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 13 classes define auto mapping attributes
+DEBUG 2017-09-24 16:14:47,355 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2017-09-24 16:14:47,359 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Sessions.Dto.UserLoginInfoDto
+DEBUG 2017-09-24 16:14:47,359 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Users.Dto.CreateUserDto
+DEBUG 2017-09-24 16:14:47,359 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Users.Dto.UpdateUserDto
+DEBUG 2017-09-24 16:14:47,359 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Users.Dto.UserDto
+DEBUG 2017-09-24 16:14:47,359 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Roles.Dto.CreateRoleDto
+DEBUG 2017-09-24 16:14:47,359 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Roles.Dto.PermissionDto
+DEBUG 2017-09-24 16:14:47,359 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Roles.Dto.RoleDto
+DEBUG 2017-09-24 16:14:47,359 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2017-09-24 16:14:47,359 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.MultiTenancy.Dto.EditTenantDto
+DEBUG 2017-09-24 16:14:47,359 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.MultiTenancy.Dto.TenantDto
+DEBUG 2017-09-24 16:14:47,359 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Web.Models.Account.TenantChangeViewModel
+DEBUG 2017-09-24 16:14:47,360 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2017-09-24 16:14:48,655 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2017-09-24 16:14:48,656 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2017-09-24 16:14:48,657 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.Sources.ISourceAppService' with service name 'app/source'.
+DEBUG 2017-09-24 16:14:48,658 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2017-09-24 16:14:48,658 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2017-09-24 16:14:48,659 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.Games.IGameAppService' with service name 'app/game'.
+DEBUG 2017-09-24 16:14:48,660 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.Configuration.IConfigurationAppService' with service name 'app/configuration'.
+DEBUG 2017-09-24 16:14:48,661 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
+DEBUG 2017-09-24 16:14:48,661 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.Events.IEventAppService' with service name 'app/event'.
+DEBUG 2017-09-24 16:16:47,886 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-09-24 16:16:47,901 [1    ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
+DEBUG 2017-09-24 16:16:47,908 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: GamerAssistant.Web.GamerAssistantWebModule, GamerAssistant.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:16:47,911 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: GamerAssistant.GamerAssistantDataModule, GamerAssistant.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:16:47,911 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:16:47,911 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:16:47,911 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:16:47,911 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:16:47,912 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:16:47,912 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:16:47,912 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: GamerAssistant.GamerAssistantCoreModule, GamerAssistant.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:16:47,913 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: GamerAssistant.GamerAssistantApplicationModule, GamerAssistant.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:16:47,913 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:16:47,913 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: GamerAssistant.Api.GamerAssistantWebApiModule, GamerAssistant.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:16:47,913 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:16:47,913 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:16:47,913 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:16:47,914 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:16:47,914 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:16:47,917 [1    ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
+DEBUG 2017-09-24 16:16:48,022 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-09-24 16:16:48,022 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-09-24 16:16:48,022 [1    ] o.Configuration.LanguageManagementConfig - Converted GamerAssistant (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-09-24 16:16:48,022 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-09-24 16:16:48,286 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: GamerAssistant.EntityFramework.GamerAssistantDbContext, GamerAssistant.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-24 16:16:49,315 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-09-24 16:16:49,321 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-09-24 16:16:49,330 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-09-24 16:16:49,332 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: GamerAssistant
+DEBUG 2017-09-24 16:16:49,332 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-09-24 16:16:49,400 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-09-24 16:16:49,447 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 13 classes define auto mapping attributes
+DEBUG 2017-09-24 16:16:49,447 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2017-09-24 16:16:49,450 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Sessions.Dto.UserLoginInfoDto
+DEBUG 2017-09-24 16:16:49,450 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Users.Dto.CreateUserDto
+DEBUG 2017-09-24 16:16:49,450 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Users.Dto.UpdateUserDto
+DEBUG 2017-09-24 16:16:49,451 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Users.Dto.UserDto
+DEBUG 2017-09-24 16:16:49,451 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Roles.Dto.CreateRoleDto
+DEBUG 2017-09-24 16:16:49,451 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Roles.Dto.PermissionDto
+DEBUG 2017-09-24 16:16:49,451 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Roles.Dto.RoleDto
+DEBUG 2017-09-24 16:16:49,451 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2017-09-24 16:16:49,451 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.MultiTenancy.Dto.EditTenantDto
+DEBUG 2017-09-24 16:16:49,451 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.MultiTenancy.Dto.TenantDto
+DEBUG 2017-09-24 16:16:49,451 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Web.Models.Account.TenantChangeViewModel
+DEBUG 2017-09-24 16:16:49,451 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - GamerAssistant.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2017-09-24 16:16:50,604 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2017-09-24 16:16:50,605 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2017-09-24 16:16:50,606 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.Sources.ISourceAppService' with service name 'app/source'.
+DEBUG 2017-09-24 16:16:50,607 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2017-09-24 16:16:50,608 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2017-09-24 16:16:50,608 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.Games.IGameAppService' with service name 'app/game'.
+DEBUG 2017-09-24 16:16:50,609 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.Configuration.IConfigurationAppService' with service name 'app/configuration'.
+DEBUG 2017-09-24 16:16:50,610 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
+DEBUG 2017-09-24 16:16:50,611 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'GamerAssistant.Events.IEventAppService' with service name 'app/event'.

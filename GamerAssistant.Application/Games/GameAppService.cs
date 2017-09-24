@@ -113,7 +113,7 @@ namespace GamerAssistant.Games
 
         public TabletopGame GetTabletopGameById(int gameId)
         {
-            var game = _tabletopGameRepository.GetAll().FirstOrDefault(x => x.Id == gameId);
+            var game = _tabletopGameRepository.GetAll().FirstOrDefault(x => x.TabletopSourceGameId == gameId);
 
             if (game == null)
                 return null;

@@ -1,5 +1,5 @@
-﻿using System.Web.Mvc;
-using Abp.Web.Mvc.Authorization;
+﻿using Abp.Web.Mvc.Authorization;
+using System.Web.Mvc;
 
 namespace GamerAssistant.Web.Controllers
 {
@@ -8,7 +8,12 @@ namespace GamerAssistant.Web.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            //Get the current user id
+            var userId = (int)AbpSession.UserId;
+
+            ViewBag.UserId = userId;
+
+            return View("Index");
         }
-	}
+    }
 }

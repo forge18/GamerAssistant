@@ -2728,7 +2728,6 @@
     <Content Include="Views\Friends\FriendList\FriendList.js" />
     <Content Include="Views\Games\GameList\GameList.js" />
     <Content Include="Views\Games\GameMaintenance\GameMaintenance.js" />
-    <Content Include="Views\Home\Index.js" />
     <Content Include="Views\Roles\Index.js" />
     <Content Include="Views\Roles\_EditRoleModal.js" />
     <Content Include="Views\Shared\_Layout.css" />
@@ -2757,7 +2756,7 @@
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\EventsController.cs" />
     <Compile Include="Controllers\FriendsController.cs" />
-    <Compile Include="Controllers\GameLibraryController.cs" />
+    <Compile Include="Controllers\GamesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\Results\ChallengeResult.cs" />
     <Compile Include="Controllers\RolesController.cs" />

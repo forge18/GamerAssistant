@@ -10,13 +10,13 @@ using System.Web.Mvc;
 
 namespace GamerAssistant.Web.Controllers
 {
-    public class GameLibraryController : Controller
+    public class GamesController : Controller
     {
         private readonly GameAppService _gameService;
         private readonly SourceAppService _sourceService;
         private readonly UserAppService _userService;
 
-        public GameLibraryController(
+        public GamesController(
             GameAppService gameService,
             SourceAppService sourceService,
             UserAppService userService
@@ -238,20 +238,22 @@ namespace GamerAssistant.Web.Controllers
             }
         }
 
-        public JsonResult GetGameCollection(int userId)
+        public JsonResult GetGameCollection(int id)
         {
             var model = new List<TabletopGameViewModel>();
 
-            var collection = _userService.GetGamesById(userId);
+            var collection = _userService.GetGamesById(id);
 
             foreach (var item in collection)
             {
                 var gameData = _gameService.GetTabletopGameById(item.GameId);
-                var minPlayers = gameData.MinPlayers.FirstOrDefault();
-                var maxPlayers = gameData.MaxPlayers.FirstOrDefault();
-                var yearPublished = gameData.YearPublished.FirstOrDefault();
+
                 if (gameData != null)
                 {
+                    var minPlayers = gameData.MinPlayers.FirstOrDefault();
+                    var maxPlayers = gameData.MaxPlayers.FirstOrDefault();
+                    var yearPublished = gameData.YearPublished.FirstOrDefault();
+
                     var game = new TabletopGameViewModel()
                     {
                         Id = gameData.TabletopSourceGameId,
@@ -279,27 +281,27 @@ namespace GamerAssistant.Web.Controllers
                         }
                     }
 
-                    var gameExpansions = _gameService.GetTabletopExpansionsByGameId(item.GameId);
-                    if (gameExpansions != null)
-                    {
-                        foreach (var gameExpansion in gameExpansions)
-                        {
-                            var expansionDetails = _gameService.GetTabletopGameById(gameExpansion.ExpansionGameId);
-                            if (expansionDetails != null)
-                            {
-                                var expansion = new TabletopGameViewModel.Expansion()
-                                {
-                                    Id = expansionDetails.Id,
-                                    Name = expansionDetails.Name
-                                };
-                                game.Expansions.Add(expansion);
-                            }
-                            else
-                            {
-                                return Json(JsonResponseFactory.ErrorResponse(""), JsonRequestBehavior.AllowGet);
-                            }
-                        }
-                    }
+                    //var gameExpansions = _gameService.GetTabletopExpansionsByGameId(item.GameId);
+                    //if (gameExpansions != null)
+                    //{
+                    //    foreach (var gameExpansion in gameExpansions)
+                    //    {
+                    //        var expansionDetails = _gameService.GetTabletopGameById(gameExpansion.ExpansionGameId);
+                    //        if (expansionDetails != null)
+                    //        {
+                    //            var expansion = new TabletopGameViewModel.Expansion()
+                    //            {
+                    //                Id = expansionDetails.Id,
+                    //                Name = expansionDetails.Name
+                    //            };
+                    //            game.Expansions.Add(expansion);
+                    //        }
+                    //        else
+                    //        {
+                    //            return Json(JsonResponseFactory.ErrorResponse(""), JsonRequestBehavior.AllowGet);
+                    //        }
+                    //    }
+                    //}
 
                     var gameMechanics = _gameService.GetTabletopMechanicsByGameId(item.GameId);
                     if (gameMechanics != null)
