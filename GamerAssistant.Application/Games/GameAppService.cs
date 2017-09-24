@@ -111,9 +111,39 @@ namespace GamerAssistant.Games
             return gameMechanics;
         }
 
+        public TabletopGame GetTabletopGameById(int gameId)
+        {
+            var game = _tabletopGameRepository.GetAll().FirstOrDefault(x => x.Id == gameId);
+
+            if (game == null)
+                return null;
+
+            return game;
+        }
+
+        public int GetTabletopCategoryByName(string name)
+        {
+            var category = _tabletopCategoryRepository.GetAll().FirstOrDefault(x => x.Name == name).Id;
+
+            if (category == 0)
+                return -1;
+
+            return category;
+        }
+
+        public int GetTabletopMechanicByName(string name)
+        {
+            var mechanic = _tabletopMechanicRepository.GetAll().FirstOrDefault(x => x.Name == name).Id;
+
+            if (mechanic == 0)
+                return -1;
+
+            return mechanic;
+        }
+
         public void AddTabletopGame(TabletopGame game)
         {
-            _tabletopGameRepository.Insert(game);
+            _tabletopGameRepository.InsertAndGetId(game);
         }
 
         public void UpdateTabletopGame(TabletopGame game)
@@ -126,9 +156,21 @@ namespace GamerAssistant.Games
             _tabletopGameRepository.Delete(gameId);
         }
 
+        public TabletopCategory AddTabletopCategory(TabletopCategory category)
+        {
+            _tabletopCategoryRepository.InsertAndGetId(category);
+
+            return category;
+        }
+
+        public void DeleteTabletopCategory(int categoryId)
+        {
+            _tabletopCategoryRepository.Delete(categoryId);
+        }
+
         public void AddTabletopGameCategory(TabletopGameCategory gameCategory)
         {
-            _tabletopGameCategoryRepository.Insert(gameCategory);
+            _tabletopGameCategoryRepository.InsertAndGetId(gameCategory);
         }
 
         public void DeleteTabletopGameCategoryById(int gameCategoryId)
@@ -136,9 +178,21 @@ namespace GamerAssistant.Games
             _tabletopGameCategoryRepository.Delete(gameCategoryId);
         }
 
+        public TabletopMechanic AddTabletopMechanic(TabletopMechanic mechanic)
+        {
+            _tabletopMechanicRepository.InsertAndGetId(mechanic);
+
+            return mechanic;
+        }
+
+        public void DeleteTabletopMechanic(int mechanicId)
+        {
+            _tabletopMechanicRepository.Delete(mechanicId);
+        }
+
         public void AddTabletopGameMechanic(TabletopGameMechanic gameMechanic)
         {
-            _tabletopGameMechanicRepository.Insert(gameMechanic);
+            _tabletopGameMechanicRepository.InsertAndGetId(gameMechanic);
         }
 
         public void DeleteTabletopGameMechanicById(int gameMechanicId)
@@ -148,7 +202,7 @@ namespace GamerAssistant.Games
 
         public void AddTabletopGameExpansion(TabletopGameExpansion gameExpansion)
         {
-            _tabletopGameExpansionRepository.Insert(gameExpansion);
+            _tabletopGameExpansionRepository.InsertAndGetId(gameExpansion);
         }
 
         public void DeleteTabletopGameExpansionById(int gameExpansionId)

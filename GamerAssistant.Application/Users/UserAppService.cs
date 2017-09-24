@@ -187,6 +187,15 @@ namespace GamerAssistant.Users
             return userVotes;
         }
 
+        public IList<UserGame> GetUsersByGameId(int gameId)
+        {
+            var userGames = _userGameRepository.GetAll().Where(x => x.GameId == gameId).ToList();
+            if (userGames == null)
+                return null;
+
+            return userGames;
+        }
+
         public void AddFavoriteById(UserFavorite favorite)
         {
             _userFavoriteRepository.Insert(favorite);

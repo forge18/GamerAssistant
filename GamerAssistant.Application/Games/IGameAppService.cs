@@ -18,15 +18,29 @@ namespace GamerAssistant.Games
 
         IList<TabletopMechanic> GetTabletopMechanics();
 
+        TabletopGame GetTabletopGameById(int gameId);
+
+        int GetTabletopCategoryByName(string name);
+
+        int GetTabletopMechanicByName(string name);
+
         void AddTabletopGame(TabletopGame game);
 
         void UpdateTabletopGame(TabletopGame game);
 
         void DeleteTabletopGameById(int gameId);
 
+        TabletopCategory AddTabletopCategory(TabletopCategory category);
+
+        void DeleteTabletopCategory(int categoryId);
+
         void AddTabletopGameCategory(TabletopGameCategory gameCategory);
 
         void DeleteTabletopGameCategoryById(int gameCategoryId);
+
+        TabletopMechanic AddTabletopMechanic(TabletopMechanic mechanic);
+
+        void DeleteTabletopMechanic(int mechanicId);
 
         void AddTabletopGameMechanic(TabletopGameMechanic gameMechanic);
 

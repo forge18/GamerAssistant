@@ -149,6 +149,22 @@
     <Compile Include="Migrations\201709222330237_ReconfigureSqlDatabase.Designer.cs">
       <DependentUpon>201709222330237_ReconfigureSqlDatabase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709232244292_ChangeUserGameModel.cs" />
+    <Compile Include="Migrations\201709232244292_ChangeUserGameModel.Designer.cs">
+      <DependentUpon>201709232244292_ChangeUserGameModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709232312468_ChangeGameModel.cs" />
+    <Compile Include="Migrations\201709232312468_ChangeGameModel.Designer.cs">
+      <DependentUpon>201709232312468_ChangeGameModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709232332332_ChangeGameExpansionModel.cs" />
+    <Compile Include="Migrations\201709232332332_ChangeGameExpansionModel.Designer.cs">
+      <DependentUpon>201709232332332_ChangeGameExpansionModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709240044494_ChangeMechanicsModel.cs" />
+    <Compile Include="Migrations\201709240044494_ChangeMechanicsModel.Designer.cs">
+      <DependentUpon>201709240044494_ChangeMechanicsModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\AbpZeroDbMigrator.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="GamerAssistantDataModule.cs" />
@@ -185,6 +201,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709222330237_ReconfigureSqlDatabase.resx">
       <DependentUpon>201709222330237_ReconfigureSqlDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709232244292_ChangeUserGameModel.resx">
+      <DependentUpon>201709232244292_ChangeUserGameModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709232312468_ChangeGameModel.resx">
+      <DependentUpon>201709232312468_ChangeGameModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709232332332_ChangeGameExpansionModel.resx">
+      <DependentUpon>201709232332332_ChangeGameExpansionModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709240044494_ChangeMechanicsModel.resx">
+      <DependentUpon>201709240044494_ChangeMechanicsModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

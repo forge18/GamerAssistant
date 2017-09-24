@@ -201,6 +201,7 @@ D:\src\GamerAssistant\GamerAssistant.Web\bin\Nito.AsyncEx.Concurrent.dll
 D:\src\GamerAssistant\GamerAssistant.Web\bin\Nito.AsyncEx.dll
 D:\src\GamerAssistant\GamerAssistant.Web\bin\Nito.AsyncEx.Enlightenment.dll
 D:\src\GamerAssistant\GamerAssistant.Web\bin\Owin.dll
+D:\src\GamerAssistant\GamerAssistant.Web\bin\RestSharp.dll
 D:\src\GamerAssistant\GamerAssistant.Web\bin\System.Collections.Immutable.dll
 D:\src\GamerAssistant\GamerAssistant.Web\bin\System.Linq.Dynamic.Core.dll
 D:\src\GamerAssistant\GamerAssistant.Web\bin\System.Net.Http.Formatting.dll
@@ -278,6 +279,7 @@ D:\src\GamerAssistant\GamerAssistant.Web\bin\Newtonsoft.Json.xml
 D:\src\GamerAssistant\GamerAssistant.Web\bin\Nito.AsyncEx.xml
 D:\src\GamerAssistant\GamerAssistant.Web\bin\Nito.AsyncEx.Concurrent.xml
 D:\src\GamerAssistant\GamerAssistant.Web\bin\Nito.AsyncEx.Enlightenment.xml
+D:\src\GamerAssistant\GamerAssistant.Web\bin\RestSharp.xml
 D:\src\GamerAssistant\GamerAssistant.Web\bin\System.Collections.Immutable.xml
 D:\src\GamerAssistant\GamerAssistant.Web\bin\System.Linq.Dynamic.Core.xml
 D:\src\GamerAssistant\GamerAssistant.Web\bin\System.Net.Http.Formatting.xml
@@ -296,5 +298,3 @@ D:\src\GamerAssistant\GamerAssistant.Web\bin\zh\Hangfire.Core.resources.dll
 D:\src\GamerAssistant\GamerAssistant.Web\obj\Debug\GamerAssistant.Web.csprojResolveAssemblyReference.cache
 D:\src\GamerAssistant\GamerAssistant.Web\obj\Debug\GamerAssistant.Web.dll
 D:\src\GamerAssistant\GamerAssistant.Web\obj\Debug\GamerAssistant.Web.pdb
-D:\src\GamerAssistant\GamerAssistant.Web\bin\RestSharp.dll
-D:\src\GamerAssistant\GamerAssistant.Web\bin\RestSharp.xml

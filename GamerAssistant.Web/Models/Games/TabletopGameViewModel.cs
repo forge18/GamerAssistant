@@ -3,68 +3,67 @@ using System.Collections.Generic;
 
 namespace GamerAssistant.Web.Models.Games
 {
-    public class GameListViewModel
+    public class TabletopGameViewModel
     {
-        public GameListViewModel()
+        public TabletopGameViewModel()
         {
+            Categories = new List<Category>();
             Expansions = new List<Expansion>();
-            Images = new List<Image>();
+            Mechanics = new List<Mechanic>();
             PlayDates = new List<PlayDate>();
         }
 
         public int Id { get; set; }
 
+        public string GameType { get; set; }
+
         public string Name { get; set; }
+
+        public string Description { get; set; }
 
         public int MinPlayers { get; set; }
 
         public int MaxPlayers { get; set; }
 
-        public int TypeId { get; set; }
+        public int YearPublished { get; set; }
 
-        public string TypeName { get; set; }
-
-        public int ThemeId { get; set; }
-
-        public string ThemeName { get; set; }
-
-        public int CategoryId { get; set; }
-
-        public string CategoryName { get; set; }
-
-        public int PrimaryMechanicId { get; set; }
-
-        public string PrimaryMechanicName { get; set; }
-
-        public int SecondaryMechanicId { get; set; }
-
-        public string SecondaryMechanicName { get; set; }
-
-        public string PrimaryImageUrl { get; set; }
-
-        public int OwnerId { get; set; }
+        public int PlayTime { get; set; }
 
         public string OwnerName { get; set; }
 
+        public string ImageUrl { get; set; }
 
+        public string ThumbnailUrl { get; set; }
+
+        public IList<Category> Categories { get; set; }
 
         public IList<Expansion> Expansions { get; set; }
 
-        public IList<Image> Images { get; set; }
+        public IList<Mechanic> Mechanics { get; set; }
 
         public IList<PlayDate> PlayDates { get; set; }
 
 
         #region Nested Classes
-
-        public class Expansion
+        public class Category
         {
+            public int Id { get; set; }
+
             public string Name { get; set; }
         }
 
-        public class Image
+        public class Expansion
         {
-            public string ImageUrl { get; set; }
+            public int Id { get; set; }
+
+            public string Name { get; set; }
+        }
+
+        public class Mechanic
+        {
+            public int Id { get; set; }
+
+            public string Name { get; set; }
         }
 
         public class PlayDate

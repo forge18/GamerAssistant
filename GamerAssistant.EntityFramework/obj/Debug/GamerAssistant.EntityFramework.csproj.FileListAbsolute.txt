@@ -117,9 +117,13 @@ D:\src\GamerAssistant\GamerAssistant.EntityFramework\bin\Debug\System.Collection
 D:\src\GamerAssistant\GamerAssistant.EntityFramework\bin\Debug\System.Linq.Dynamic.Core.xml
 D:\src\GamerAssistant\GamerAssistant.EntityFramework\obj\Debug\GamerAssistant.EntityFramework.csprojResolveAssemblyReference.cache
 D:\src\GamerAssistant\GamerAssistant.EntityFramework\obj\Debug\GamerAssistant.Migrations.Initial_Migration.resources
-D:\src\GamerAssistant\GamerAssistant.EntityFramework\obj\Debug\GamerAssistant.EntityFramework.csproj.GenerateResource.Cache
-D:\src\GamerAssistant\GamerAssistant.EntityFramework\obj\Debug\GamerAssistant.EntityFramework.dll
-D:\src\GamerAssistant\GamerAssistant.EntityFramework\obj\Debug\GamerAssistant.EntityFramework.pdb
 D:\src\GamerAssistant\GamerAssistant.EntityFramework\obj\Debug\GamerAssistant.Migrations.InitialTables.resources
 D:\src\GamerAssistant\GamerAssistant.EntityFramework\obj\Debug\GamerAssistant.Migrations.SetUpServices.resources
 D:\src\GamerAssistant\GamerAssistant.EntityFramework\obj\Debug\GamerAssistant.Migrations.ReconfigureSqlDatabase.resources
+D:\src\GamerAssistant\GamerAssistant.EntityFramework\obj\Debug\GamerAssistant.Migrations.ChangeUserGameModel.resources
+D:\src\GamerAssistant\GamerAssistant.EntityFramework\obj\Debug\GamerAssistant.Migrations.ChangeGameModel.resources
+D:\src\GamerAssistant\GamerAssistant.EntityFramework\obj\Debug\GamerAssistant.Migrations.ChangeGameExpansionModel.resources
+D:\src\GamerAssistant\GamerAssistant.EntityFramework\obj\Debug\GamerAssistant.Migrations.ChangeMechanicsModel.resources
+D:\src\GamerAssistant\GamerAssistant.EntityFramework\obj\Debug\GamerAssistant.EntityFramework.csproj.GenerateResource.Cache
+D:\src\GamerAssistant\GamerAssistant.EntityFramework\obj\Debug\GamerAssistant.EntityFramework.dll
+D:\src\GamerAssistant\GamerAssistant.EntityFramework\obj\Debug\GamerAssistant.EntityFramework.pdb

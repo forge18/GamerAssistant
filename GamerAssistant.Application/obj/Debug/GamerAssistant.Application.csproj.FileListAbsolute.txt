@@ -69,6 +69,7 @@ D:\src\GamerAssistant\GamerAssistant.Application\bin\Debug\Newtonsoft.Json.dll
 D:\src\GamerAssistant\GamerAssistant.Application\bin\Debug\Nito.AsyncEx.Concurrent.dll
 D:\src\GamerAssistant\GamerAssistant.Application\bin\Debug\Nito.AsyncEx.dll
 D:\src\GamerAssistant\GamerAssistant.Application\bin\Debug\Nito.AsyncEx.Enlightenment.dll
+D:\src\GamerAssistant\GamerAssistant.Application\bin\Debug\RestSharp.dll
 D:\src\GamerAssistant\GamerAssistant.Application\bin\Debug\System.Collections.Immutable.dll
 D:\src\GamerAssistant\GamerAssistant.Application\bin\Debug\System.Linq.Dynamic.Core.dll
 D:\src\GamerAssistant\GamerAssistant.Application\bin\Debug\GamerAssistant.Core.pdb
@@ -93,10 +94,9 @@ D:\src\GamerAssistant\GamerAssistant.Application\bin\Debug\Newtonsoft.Json.xml
 D:\src\GamerAssistant\GamerAssistant.Application\bin\Debug\Nito.AsyncEx.xml
 D:\src\GamerAssistant\GamerAssistant.Application\bin\Debug\Nito.AsyncEx.Concurrent.xml
 D:\src\GamerAssistant\GamerAssistant.Application\bin\Debug\Nito.AsyncEx.Enlightenment.xml
+D:\src\GamerAssistant\GamerAssistant.Application\bin\Debug\RestSharp.xml
 D:\src\GamerAssistant\GamerAssistant.Application\bin\Debug\System.Collections.Immutable.xml
 D:\src\GamerAssistant\GamerAssistant.Application\bin\Debug\System.Linq.Dynamic.Core.xml
 D:\src\GamerAssistant\GamerAssistant.Application\obj\Debug\GamerAssistant.Application.csprojResolveAssemblyReference.cache
 D:\src\GamerAssistant\GamerAssistant.Application\obj\Debug\GamerAssistant.Application.dll
 D:\src\GamerAssistant\GamerAssistant.Application\obj\Debug\GamerAssistant.Application.pdb
-D:\src\GamerAssistant\GamerAssistant.Application\bin\Debug\RestSharp.dll
-D:\src\GamerAssistant\GamerAssistant.Application\bin\Debug\RestSharp.xml

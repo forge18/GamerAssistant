@@ -45,9 +45,6 @@ C:\GamerAssistant\src\GamerAssistant.Core\bin\Debug\EntityFramework.dll
 C:\GamerAssistant\src\GamerAssistant.Core\bin\Debug\EntityFramework.SqlServer.dll
 C:\GamerAssistant\src\GamerAssistant.Core\bin\Debug\EntityFramework.xml
 C:\GamerAssistant\src\GamerAssistant.Core\bin\Debug\EntityFramework.SqlServer.xml
-D:\src\GamerAssistant\GamerAssistant.Core\obj\Debug\GamerAssistant.Core.csprojResolveAssemblyReference.cache
-D:\src\GamerAssistant\GamerAssistant.Core\obj\Debug\GamerAssistant.Core.dll
-D:\src\GamerAssistant\GamerAssistant.Core\obj\Debug\GamerAssistant.Core.pdb
 D:\src\GamerAssistant\GamerAssistant.Core\bin\Debug\GamerAssistant.Core.dll.config
 D:\src\GamerAssistant\GamerAssistant.Core\bin\Debug\GamerAssistant.Core.dll
 D:\src\GamerAssistant\GamerAssistant.Core\bin\Debug\GamerAssistant.Core.pdb
@@ -92,3 +89,6 @@ D:\src\GamerAssistant\GamerAssistant.Core\bin\Debug\Nito.AsyncEx.Concurrent.xml
 D:\src\GamerAssistant\GamerAssistant.Core\bin\Debug\Nito.AsyncEx.Enlightenment.xml
 D:\src\GamerAssistant\GamerAssistant.Core\bin\Debug\System.Collections.Immutable.xml
 D:\src\GamerAssistant\GamerAssistant.Core\bin\Debug\System.Linq.Dynamic.Core.xml
+D:\src\GamerAssistant\GamerAssistant.Core\obj\Debug\GamerAssistant.Core.csprojResolveAssemblyReference.cache
+D:\src\GamerAssistant\GamerAssistant.Core\obj\Debug\GamerAssistant.Core.dll
+D:\src\GamerAssistant\GamerAssistant.Core\obj\Debug\GamerAssistant.Core.pdb

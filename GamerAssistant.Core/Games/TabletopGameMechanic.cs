@@ -8,6 +8,6 @@ namespace GamerAssistant.Games
 
         public int MechanicId { get; set; }
 
-        public string MechnanicName { get; set; }
+        public string MechanicName { get; set; }
     }
 }

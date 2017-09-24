@@ -49,6 +49,8 @@ namespace GamerAssistant.Sources
             public string Type { get; set; }
 
             public string SortIndex { get; set; }
+
+            public string value { get; set; }
         }
 
         public class Link

@@ -15,17 +15,17 @@ namespace GamerAssistant.Games
 
         public string Description { get; set; }
 
-        public int YearPublished { get; set; }
+        public string YearPublished { get; set; }
 
-        public int MinPlayers { get; set; }
+        public string MinPlayers { get; set; }
 
-        public int MaxPlayers { get; set; }
+        public string MaxPlayers { get; set; }
 
-        public int PlayTime { get; set; }
+        public string PlayTime { get; set; }
 
-        public int Image { get; set; }
+        public string Image { get; set; }
 
-        public int ThumbnailImage { get; set; }
+        public string ThumbnailImage { get; set; }
 
         public DateTime AddedOn { get; set; }
     }

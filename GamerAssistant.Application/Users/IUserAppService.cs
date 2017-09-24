@@ -26,6 +26,8 @@ namespace GamerAssistant.Users
         //Get all upcoming votes by user id
         IList<UserVote> GetUpcomingVotesById(int userId);
 
+        IList<UserGame> GetUsersByGameId(int gameId);
+
         //Add favorite
         void AddFavoriteById(UserFavorite favorite);
 

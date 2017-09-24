@@ -2726,8 +2726,8 @@
     <Content Include="Views\Events\EventList\EventList.js" />
     <Content Include="Views\Events\EventScheduler\EventScheduler.js" />
     <Content Include="Views\Friends\FriendList\FriendList.js" />
-    <Content Include="Views\GameLibrary\GameList\GameList.js" />
-    <Content Include="Views\GameLibrary\GameMaintenance\GameMaintenance.js" />
+    <Content Include="Views\Games\GameList\GameList.js" />
+    <Content Include="Views\Games\GameMaintenance\GameMaintenance.js" />
     <Content Include="Views\Home\Index.js" />
     <Content Include="Views\Roles\Index.js" />
     <Content Include="Views\Roles\_EditRoleModal.js" />
@@ -2765,13 +2765,14 @@
     <Compile Include="Controllers\TenantsController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Helpers\HtmlHelpers.cs" />
+    <Compile Include="Infrastructure\JsonResponseFactory.cs" />
     <Compile Include="Models\Account\TenantChangeModalViewModel.cs" />
     <Compile Include="Models\Account\TenantChangeViewModel.cs" />
     <Compile Include="Models\Admin\AdminViewModel.cs" />
     <Compile Include="Models\Common\Modals\ModalHeaderViewModel.cs" />
     <Compile Include="Models\Events\EventListViewModel.cs" />
     <Compile Include="Models\Friends\FriendListViewModel.cs" />
-    <Compile Include="Models\GameLibrary\GameLibraryViewModel.cs" />
+    <Compile Include="Models\Games\TabletopGameViewModel.cs" />
     <Compile Include="Models\Layout\RightSideBarViewModel.cs" />
     <Compile Include="Models\Account\LoginFormViewModel.cs" />
     <Compile Include="Models\Account\LoginViewModel.cs" />
@@ -2911,7 +2912,7 @@
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Events\Index.cshtml" />
     <Content Include="Views\Friends\Index.cshtml" />
-    <Content Include="Views\GameLibrary\Index.cshtml" />
+    <Content Include="Views\Games\Index.cshtml" />
     <Content Include="Views\Tasks\Index.cshtml" />
     <Content Include="Views\Admin\AdminCategories\_AdminCategories.cshtml" />
     <Content Include="Views\Admin\AdminMechanics\_AdminMechanics.cshtml" />
@@ -2919,8 +2920,8 @@
     <Content Include="Views\Events\EventList\_EventList.cshtml" />
     <Content Include="Views\Events\EventScheduler\_EventScheduler.cshtml" />
     <Content Include="Views\Friends\FriendList\_FriendList.cshtml" />
-    <Content Include="Views\GameLibrary\GameList\_GameList.cshtml" />
-    <Content Include="Views\GameLibrary\GameMaintenance\_GameMaintenance.cshtml" />
+    <Content Include="Views\Games\GameList\_GameList.cshtml" />
+    <Content Include="Views\Games\GameMaintenance\_GameMaintenance.cshtml" />
     <Content Include="Views\Tasks\TaskList\_TaskList.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
