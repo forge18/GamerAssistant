@@ -3,7 +3,7 @@ using System;
 
 namespace GamerAssistant.Games
 {
-    public class TabletopGame : Entity
+    public class Game : Entity
     {
         public int TabletopSourceType { get; set; }
 
@@ -27,6 +27,10 @@ namespace GamerAssistant.Games
 
         public string ThumbnailImage { get; set; }
 
+        public bool IsExpansion { get; set; }
+
+        public int ParentGameId { get; set; }
+
         public DateTime AddedOn { get; set; }
     }
 
@@ -34,6 +38,6 @@ namespace GamerAssistant.Games
     {
         ManualEntry = 0,
         BoardGameGeek = 1,
-        RpgGeek = 2
+        Steam = 2
     }
 }

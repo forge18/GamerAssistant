@@ -127,3 +127,5 @@ D:\src\GamerAssistant\GamerAssistant.EntityFramework\obj\Debug\GamerAssistant.Mi
 D:\src\GamerAssistant\GamerAssistant.EntityFramework\obj\Debug\GamerAssistant.EntityFramework.csproj.GenerateResource.Cache
 D:\src\GamerAssistant\GamerAssistant.EntityFramework\obj\Debug\GamerAssistant.EntityFramework.dll
 D:\src\GamerAssistant\GamerAssistant.EntityFramework\obj\Debug\GamerAssistant.EntityFramework.pdb
+D:\src\GamerAssistant\GamerAssistant.EntityFramework\obj\Debug\GamerAssistant.Migrations.RefactorCodeAndRemoveUnneededDataPoints.resources
+D:\src\GamerAssistant\GamerAssistant.EntityFramework\obj\Debug\GamerAssistant.Migrations.RemoveExpansionsTable.resources

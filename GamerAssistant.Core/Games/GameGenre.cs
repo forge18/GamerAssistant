@@ -2,10 +2,12 @@
 
 namespace GamerAssistant.Games
 {
-    public class TabletopGameExpansion : Entity
+    public class GameGenre : Entity
     {
         public int GameId { get; set; }
 
-        public int ExpansionGameId { get; set; }
+        public int GenreId { get; set; }
+
+        public string GenreName { get; set; }
     }
 }

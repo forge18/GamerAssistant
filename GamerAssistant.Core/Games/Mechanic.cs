@@ -2,7 +2,7 @@
 
 namespace GamerAssistant.Games
 {
-    public class TabletopMechanic : Entity
+    public class Mechanic : Entity
     {
         public string Name { get; set; }
     }

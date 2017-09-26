@@ -60,6 +60,8 @@ namespace GamerAssistant.Sources
             public string Id { get; set; }
 
             public string value { get; set; }
+
+            public string Inbound { get; set; }
         }
     }
 }

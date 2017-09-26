@@ -3,13 +3,16 @@ using System.Collections.Generic;
 
 namespace GamerAssistant.Web.Models.Games
 {
-    public class TabletopGameViewModel
+    public class GameViewModel
     {
-        public TabletopGameViewModel()
+        public GameViewModel()
         {
             Categories = new List<Category>();
             Expansions = new List<Expansion>();
+            Genres = new List<Genre>();
             Mechanics = new List<Mechanic>();
+            Owners = new List<Owner>();
+            Platforms = new List<Platform>();
             PlayDates = new List<PlayDate>();
         }
 
@@ -35,11 +38,21 @@ namespace GamerAssistant.Web.Models.Games
 
         public string ThumbnailUrl { get; set; }
 
+        public bool IsExpansion { get; set; }
+
+        public int ParentGameId { get; set; }
+
         public IList<Category> Categories { get; set; }
 
         public IList<Expansion> Expansions { get; set; }
 
+        public IList<Genre> Genres { get; set; }
+
         public IList<Mechanic> Mechanics { get; set; }
+
+        public IList<Owner> Owners { get; set; }
+
+        public IList<Platform> Platforms { get; set; }
 
         public IList<PlayDate> PlayDates { get; set; }
 
@@ -59,7 +72,28 @@ namespace GamerAssistant.Web.Models.Games
             public string Name { get; set; }
         }
 
+        public class Genre
+        {
+            public int Id { get; set; }
+
+            public string Name { get; set; }
+        }
+
         public class Mechanic
+        {
+            public int Id { get; set; }
+
+            public string Name { get; set; }
+        }
+
+        public class Owner
+        {
+            public int Id { get; set; }
+
+            public string Name { get; set; }
+        }
+
+        public class Platform
         {
             public int Id { get; set; }
 

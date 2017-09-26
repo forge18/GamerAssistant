@@ -21,19 +21,15 @@ namespace GamerAssistant.EntityFramework
         public virtual IDbSet<EventTask> EventTasks { get; set; }
         public virtual IDbSet<EventUser> EventUsers { get; set; }
 
-        public virtual IDbSet<TabletopCategory> TabletopCategories { get; set; }
-        public virtual IDbSet<TabletopGame> TabletopGames { get; set; }
-        public virtual IDbSet<TabletopGameCategory> TabletopGameCategories { get; set; }
-        public virtual IDbSet<TabletopGameExpansion> TabletopGameExpansions { get; set; }
-        public virtual IDbSet<TabletopGameMechanic> TabletopGameMechanics { get; set; }
-        public virtual IDbSet<TabletopMechanic> TabletopMechanics { get; set; }
-        public virtual IDbSet<VideoCategory> VideoCategories { get; set; }
-        public virtual IDbSet<VideoGame> VideoGames { get; set; }
-        public virtual IDbSet<VideoGameCategory> VideoGameCategories { get; set; }
-        public virtual IDbSet<VideoGameGenre> VideoGameGenres { get; set; }
-        public virtual IDbSet<VideoGamePlatform> VideoGamePlatforms { get; set; }
-        public virtual IDbSet<VideoGenre> VideoGenres { get; set; }
-        public virtual IDbSet<VideoPlatform> VideoPlatforms { get; set; }
+        public virtual IDbSet<Category> TabletopCategories { get; set; }
+        public virtual IDbSet<Game> TabletopGames { get; set; }
+        public virtual IDbSet<GameCategory> TabletopGameCategories { get; set; }
+        public virtual IDbSet<GameMechanic> TabletopGameMechanics { get; set; }
+        public virtual IDbSet<Mechanic> TabletopMechanics { get; set; }
+        public virtual IDbSet<GameGenre> VideoGameGenres { get; set; }
+        public virtual IDbSet<GamePlatform> VideoGamePlatforms { get; set; }
+        public virtual IDbSet<Genre> VideoGenres { get; set; }
+        public virtual IDbSet<Platform> VideoPlatforms { get; set; }
 
         public virtual IDbSet<UserFavorite> UserFavorites { get; set; }
         public virtual IDbSet<UserFriend> UserFriends { get; set; }

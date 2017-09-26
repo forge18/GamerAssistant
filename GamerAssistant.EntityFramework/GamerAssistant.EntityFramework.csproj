@@ -165,6 +165,14 @@
     <Compile Include="Migrations\201709240044494_ChangeMechanicsModel.Designer.cs">
       <DependentUpon>201709240044494_ChangeMechanicsModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709260034164_RefactorCodeAndRemoveUnneededDataPoints.cs" />
+    <Compile Include="Migrations\201709260034164_RefactorCodeAndRemoveUnneededDataPoints.Designer.cs">
+      <DependentUpon>201709260034164_RefactorCodeAndRemoveUnneededDataPoints.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709260107133_RemoveExpansionsTable.cs" />
+    <Compile Include="Migrations\201709260107133_RemoveExpansionsTable.Designer.cs">
+      <DependentUpon>201709260107133_RemoveExpansionsTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\AbpZeroDbMigrator.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="GamerAssistantDataModule.cs" />
@@ -213,6 +221,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709240044494_ChangeMechanicsModel.resx">
       <DependentUpon>201709240044494_ChangeMechanicsModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709260034164_RefactorCodeAndRemoveUnneededDataPoints.resx">
+      <DependentUpon>201709260034164_RefactorCodeAndRemoveUnneededDataPoints.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709260107133_RemoveExpansionsTable.resx">
+      <DependentUpon>201709260107133_RemoveExpansionsTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

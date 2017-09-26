@@ -6,82 +6,62 @@ namespace GamerAssistant.Games
     public interface IGameAppService : IApplicationService
     {
         //Tabletop Interfaces
-        IList<TabletopGame> GetTabletopGamesList();
+        IList<Game> GetGamesList();
 
-        IList<TabletopGameExpansion> GetTabletopExpansionsByGameId(int gameId);
+        IList<GameCategory> GetCategoriesByGameId(int gameId);
 
-        IList<TabletopGameCategory> GetTabletopCategoriesByGameId(int gameId);
+        IList<GameGenre> GetGenresByGameId(int gameId);
 
-        IList<TabletopGameMechanic> GetTabletopMechanicsByGameId(int gameId);
+        IList<GameMechanic> GetMechanicsByGameId(int gameId);
 
-        IList<TabletopCategory> GetTabletopCategories();
+        IList<GamePlatform> GetPlatformsByGameId(int gameId);
 
-        IList<TabletopMechanic> GetTabletopMechanics();
+        IList<Category> GetCategories();
 
-        TabletopGame GetTabletopGameById(int gameId);
+        IList<Genre> GetGenres();
 
-        int GetTabletopCategoryByName(string name);
+        IList<Mechanic> GetMechanics();
 
-        int GetTabletopMechanicByName(string name);
+        IList<Platform> GetPlatforms();
 
-        void AddTabletopGame(TabletopGame game);
+        Game GetGameById(int gameId);
 
-        void UpdateTabletopGame(TabletopGame game);
+        int GetCategoryByName(string name);
 
-        void DeleteTabletopGameById(int gameId);
+        int GetMechanicByName(string name);
 
-        TabletopCategory AddTabletopCategory(TabletopCategory category);
+        void AddGame(Game game);
 
-        void DeleteTabletopCategory(int categoryId);
+        void UpdateGame(Game game);
 
-        void AddTabletopGameCategory(TabletopGameCategory gameCategory);
+        void DeleteGameById(int gameId);
 
-        void DeleteTabletopGameCategoryById(int gameCategoryId);
+        Category AddCategory(Category category);
 
-        TabletopMechanic AddTabletopMechanic(TabletopMechanic mechanic);
+        void DeleteCategory(int categoryId);
 
-        void DeleteTabletopMechanic(int mechanicId);
+        void AddGameCategory(GameCategory gameCategory);
 
-        void AddTabletopGameMechanic(TabletopGameMechanic gameMechanic);
+        void DeleteGameCategoryById(int gameCategoryId);
 
-        void DeleteTabletopGameMechanicById(int gameMechanicId);
+        Mechanic AddMechanic(Mechanic mechanic);
 
-        void AddTabletopGameExpansion(TabletopGameExpansion game);
+        void DeleteMechanic(int mechanicId);
 
-        void DeleteTabletopGameExpansionById(int gameExpansionId);
+        void AddGameMechanic(GameMechanic gameMechanic);
 
+        void DeleteGameMechanicById(int gameMechanicId);
 
-        //Video Game Interfaces
-        IList<VideoGame> GetVideoGamesList();
+        Genre AddGenre(Genre genre);
 
-        IList<VideoGamePlatform> GetVideoGamePlatformsByGameId(int gameId);
+        void AddGameGenre(GameGenre gameGenre);
 
-        IList<VideoGameCategory> GetVideoGameCategoriesByGameId(int gameId);
+        void DeleteGameGenreById(int gameGenreId);
 
-        IList<VideoGameGenre> GetVideoGameGenresByGameId(int gameId);
+        Platform AddPlatform(Platform platform);
 
-        IList<VideoPlatform> GetVideoPlatforms();
+        void AddGamePlatform(GamePlatform gamePlatform);
 
-        IList<VideoCategory> GetVideoCategories();
-
-        IList<VideoGenre> GetVideoGenres();
-
-        void AddVideoGame(VideoGame game);
-
-        void UpdateVideoGame(VideoGame game);
-
-        void DeleteVideoGameById(int gameId);
-
-        void AddVideoGameCategory(VideoGameCategory gameCategory);
-
-        void DeleteVideoGameCategoryById(int gameCategoryId);
-
-        void AddVideoGameGenre(VideoGameGenre gameGenre);
-
-        void DeleteVideoGameGenreById(int gameGenreId);
-
-        void AddVideoGamePlatform(VideoGamePlatform gamePlatform);
-
-        void DeleteVideoGamePlatformById(int gamePlatformId);
+        void DeleteGamePlatformById(int gamePlatformId);
     }
 }

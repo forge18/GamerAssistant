@@ -6,74 +6,52 @@ namespace GamerAssistant.Games
 {
     public class GameAppService : IGameAppService
     {
-        private readonly IRepository<TabletopCategory> _tabletopCategoryRepository;
-        private readonly IRepository<TabletopMechanic> _tabletopMechanicRepository;
-        private readonly IRepository<TabletopGame> _tabletopGameRepository;
-        private readonly IRepository<TabletopGameExpansion> _tabletopGameExpansionRepository;
-        private readonly IRepository<TabletopGameCategory> _tabletopGameCategoryRepository;
-        private readonly IRepository<TabletopGameMechanic> _tabletopGameMechanicRepository;
-        private readonly IRepository<VideoCategory> _videoCategoryRepository;
-        private readonly IRepository<VideoGenre> _videoGenreRepository;
-        private readonly IRepository<VideoPlatform> _videoPlatformRepository;
-        private readonly IRepository<VideoGame> _videoGameRepository;
-        private readonly IRepository<VideoGameCategory> _videoGameCategoryRepository;
-        private readonly IRepository<VideoGameGenre> _videoGameGenreRepository;
-        private readonly IRepository<VideoGamePlatform> _videoGamePlatformRepository;
+        private readonly IRepository<Category> _categoryRepository;
+        private readonly IRepository<Mechanic> _mechanicRepository;
+        private readonly IRepository<Game> _gameRepository;
+        private readonly IRepository<GameCategory> _gameCategoryRepository;
+        private readonly IRepository<GameMechanic> _gameMechanicRepository;
+        private readonly IRepository<Genre> _genreRepository;
+        private readonly IRepository<Platform> _platformRepository;
+        private readonly IRepository<GameGenre> _gameGenreRepository;
+        private readonly IRepository<GamePlatform> _gamePlatformRepository;
 
 
         public GameAppService(
-            IRepository<TabletopCategory> tabletopCategoryRepository,
-            IRepository<TabletopMechanic> tabletopMechanicRepository,
-            IRepository<TabletopGame> tabletopGameRepository,
-            IRepository<TabletopGameExpansion> tabletopGameExpansionRepository,
-            IRepository<TabletopGameCategory> tabletopGameCategoryRepository,
-            IRepository<TabletopGameMechanic> tabletopGameMechanicRepository,
-            IRepository<VideoCategory> videoCategoryRepository,
-            IRepository<VideoGenre> videoGenreRepository,
-            IRepository<VideoPlatform> videoPlatformRepository,
-            IRepository<VideoGame> videoGameRepository,
-            IRepository<VideoGameCategory> videoGameCategoryRepository,
-            IRepository<VideoGameGenre> videoGameGenreRepository,
-            IRepository<VideoGamePlatform> videoGamePlatformRepository
+            IRepository<Category> categoryRepository,
+            IRepository<Mechanic> mechanicRepository,
+            IRepository<Game> gameRepository,
+            IRepository<GameCategory> gameCategoryRepository,
+            IRepository<GameMechanic> gameMechanicRepository,
+            IRepository<Genre> genreRepository,
+            IRepository<Platform> platformRepository,
+            IRepository<GameGenre> gameGenreRepository,
+            IRepository<GamePlatform> gamePlatformRepository
         )
         {
-            _tabletopCategoryRepository = tabletopCategoryRepository;
-            _tabletopMechanicRepository = tabletopMechanicRepository;
-            _tabletopGameRepository = tabletopGameRepository;
-            _tabletopGameExpansionRepository = tabletopGameExpansionRepository;
-            _tabletopGameCategoryRepository = tabletopGameCategoryRepository;
-            _tabletopGameMechanicRepository = tabletopGameMechanicRepository;
-            _videoCategoryRepository = videoCategoryRepository;
-            _videoGenreRepository = videoGenreRepository;
-            _videoPlatformRepository = videoPlatformRepository;
-            _videoGameRepository = videoGameRepository;
-            _videoGameCategoryRepository = videoGameCategoryRepository;
-            _videoGameGenreRepository = videoGameGenreRepository;
-            _videoGamePlatformRepository = videoGamePlatformRepository;
+            _categoryRepository = categoryRepository;
+            _mechanicRepository = mechanicRepository;
+            _gameRepository = gameRepository;
+            _gameCategoryRepository = gameCategoryRepository;
+            _gameMechanicRepository = gameMechanicRepository;
+            _genreRepository = genreRepository;
+            _platformRepository = platformRepository;
+            _gameGenreRepository = gameGenreRepository;
+            _gamePlatformRepository = gamePlatformRepository;
         }
 
-        public IList<TabletopGame> GetTabletopGamesList()
+        public IList<Game> GetGamesList()
         {
-            var games = _tabletopGameRepository.GetAll().ToList();
+            var games = _gameRepository.GetAll().ToList();
             if (games == null)
                 return null;
 
             return games;
         }
 
-        public IList<TabletopGameExpansion> GetTabletopExpansionsByGameId(int gameId)
+        public IList<GameCategory> GetCategoriesByGameId(int gameId)
         {
-            var gameExpansions = _tabletopGameExpansionRepository.GetAll().Where(x => x.GameId == gameId).ToList();
-
-            if (gameExpansions == null)
-                return null;
-
-            return gameExpansions;
-        }
-
-        public IList<TabletopGameCategory> GetTabletopCategoriesByGameId(int gameId)
-        {
-            var gameCategories = _tabletopGameCategoryRepository.GetAll().Where(x => x.Id == gameId).ToList();
+            var gameCategories = _gameCategoryRepository.GetAll().Where(x => x.Id == gameId).ToList();
 
             if (gameCategories == null)
                 return null;
@@ -81,9 +59,9 @@ namespace GamerAssistant.Games
             return gameCategories;
         }
 
-        public IList<TabletopGameMechanic> GetTabletopMechanicsByGameId(int gameId)
+        public IList<GameMechanic> GetMechanicsByGameId(int gameId)
         {
-            var gameMechanics = _tabletopGameMechanicRepository.GetAll().Where(x => x.Id == gameId).ToList();
+            var gameMechanics = _gameMechanicRepository.GetAll().Where(x => x.Id == gameId).ToList();
 
             if (gameMechanics == null)
                 return null;
@@ -91,9 +69,9 @@ namespace GamerAssistant.Games
             return gameMechanics;
         }
 
-        public IList<TabletopCategory> GetTabletopCategories()
+        public IList<Category> GetCategories()
         {
-            var gameCategories = _tabletopCategoryRepository.GetAll().ToList();
+            var gameCategories = _categoryRepository.GetAll().ToList();
 
             if (gameCategories == null)
                 return null;
@@ -101,9 +79,9 @@ namespace GamerAssistant.Games
             return gameCategories;
         }
 
-        public IList<TabletopMechanic> GetTabletopMechanics()
+        public IList<Mechanic> GetMechanics()
         {
-            var gameMechanics = _tabletopMechanicRepository.GetAll().ToList();
+            var gameMechanics = _mechanicRepository.GetAll().ToList();
 
             if (gameMechanics == null)
                 return null;
@@ -111,9 +89,9 @@ namespace GamerAssistant.Games
             return gameMechanics;
         }
 
-        public TabletopGame GetTabletopGameById(int gameId)
+        public Game GetGameById(int gameId)
         {
-            var game = _tabletopGameRepository.GetAll().FirstOrDefault(x => x.TabletopSourceGameId == gameId);
+            var game = _gameRepository.GetAll().FirstOrDefault(x => x.TabletopSourceGameId == gameId);
 
             if (game == null)
                 return null;
@@ -121,9 +99,9 @@ namespace GamerAssistant.Games
             return game;
         }
 
-        public int GetTabletopCategoryByName(string name)
+        public int GetCategoryByName(string name)
         {
-            var category = _tabletopCategoryRepository.GetAll().FirstOrDefault(x => x.Name == name).Id;
+            var category = _categoryRepository.GetAll().FirstOrDefault(x => x.Name == name).Id;
 
             if (category == 0)
                 return -1;
@@ -131,9 +109,19 @@ namespace GamerAssistant.Games
             return category;
         }
 
-        public int GetTabletopMechanicByName(string name)
+        public int GetGenreByName(string name)
         {
-            var mechanic = _tabletopMechanicRepository.GetAll().FirstOrDefault(x => x.Name == name).Id;
+            var genre = _genreRepository.GetAll().FirstOrDefault(x => x.Name == name).Id;
+
+            if (genre == 0)
+                return -1;
+
+            return genre;
+        }
+
+        public int GetMechanicByName(string name)
+        {
+            var mechanic = _mechanicRepository.GetAll().FirstOrDefault(x => x.Name == name).Id;
 
             if (mechanic == 0)
                 return -1;
@@ -141,87 +129,78 @@ namespace GamerAssistant.Games
             return mechanic;
         }
 
-        public void AddTabletopGame(TabletopGame game)
+        public int GetPlatformByName(string name)
         {
-            _tabletopGameRepository.InsertAndGetId(game);
+            var platform = _platformRepository.GetAll().FirstOrDefault(x => x.Name == name).Id;
+
+            if (platform == 0)
+                return -1;
+
+            return platform;
         }
 
-        public void UpdateTabletopGame(TabletopGame game)
+        public void AddGame(Game game)
         {
-            _tabletopGameRepository.Update(game);
+            _gameRepository.InsertAndGetId(game);
         }
 
-        public void DeleteTabletopGameById(int gameId)
+        public void UpdateGame(Game game)
         {
-            _tabletopGameRepository.Delete(gameId);
+            _gameRepository.Update(game);
         }
 
-        public TabletopCategory AddTabletopCategory(TabletopCategory category)
+        public void DeleteGameById(int gameId)
         {
-            _tabletopCategoryRepository.InsertAndGetId(category);
+            _gameRepository.Delete(gameId);
+        }
+
+        public Category AddCategory(Category category)
+        {
+            _categoryRepository.InsertAndGetId(category);
 
             return category;
         }
 
-        public void DeleteTabletopCategory(int categoryId)
+        public void DeleteCategory(int categoryId)
         {
-            _tabletopCategoryRepository.Delete(categoryId);
+            _categoryRepository.Delete(categoryId);
         }
 
-        public void AddTabletopGameCategory(TabletopGameCategory gameCategory)
+        public void AddGameCategory(GameCategory gameCategory)
         {
-            _tabletopGameCategoryRepository.InsertAndGetId(gameCategory);
+            _gameCategoryRepository.InsertAndGetId(gameCategory);
         }
 
-        public void DeleteTabletopGameCategoryById(int gameCategoryId)
+        public void DeleteGameCategoryById(int gameCategoryId)
         {
-            _tabletopGameCategoryRepository.Delete(gameCategoryId);
+            _gameCategoryRepository.Delete(gameCategoryId);
         }
 
-        public TabletopMechanic AddTabletopMechanic(TabletopMechanic mechanic)
+        public Mechanic AddMechanic(Mechanic mechanic)
         {
-            _tabletopMechanicRepository.InsertAndGetId(mechanic);
+            _mechanicRepository.InsertAndGetId(mechanic);
 
             return mechanic;
         }
 
-        public void DeleteTabletopMechanic(int mechanicId)
+        public void DeleteMechanic(int mechanicId)
         {
-            _tabletopMechanicRepository.Delete(mechanicId);
+            _mechanicRepository.Delete(mechanicId);
         }
 
-        public void AddTabletopGameMechanic(TabletopGameMechanic gameMechanic)
+        public void AddGameMechanic(GameMechanic gameMechanic)
         {
-            _tabletopGameMechanicRepository.InsertAndGetId(gameMechanic);
+            _gameMechanicRepository.InsertAndGetId(gameMechanic);
         }
 
-        public void DeleteTabletopGameMechanicById(int gameMechanicId)
+        public void DeleteGameMechanicById(int gameMechanicId)
         {
-            _tabletopGameMechanicRepository.Delete(gameMechanicId);
+            _gameMechanicRepository.Delete(gameMechanicId);
         }
 
-        public void AddTabletopGameExpansion(TabletopGameExpansion gameExpansion)
+        public IList<GamePlatform> GetPlatformsByGameId(int gameId)
         {
-            _tabletopGameExpansionRepository.InsertAndGetId(gameExpansion);
-        }
-
-        public void DeleteTabletopGameExpansionById(int gameExpansionId)
-        {
-            _tabletopGameExpansionRepository.Delete(gameExpansionId);
-        }
-
-        public IList<VideoGame> GetVideoGamesList()
-        {
-            var games = _videoGameRepository.GetAll().ToList();
-            if (games == null)
-                return null;
-
-            return games;
-        }
-
-        public IList<VideoGamePlatform> GetVideoGamePlatformsByGameId(int gameId)
-        {
-            var gamePlatforms = _videoGamePlatformRepository.GetAll().Where(x => x.GameId == gameId).ToList();
+            var gamePlatforms = _gamePlatformRepository.GetAll().Where(x => x.GameId == gameId).ToList();
 
             if (gamePlatforms == null)
                 return null;
@@ -229,19 +208,9 @@ namespace GamerAssistant.Games
             return gamePlatforms;
         }
 
-        public IList<VideoGameCategory> GetVideoGameCategoriesByGameId(int gameId)
+        public IList<GameGenre> GetGenresByGameId(int gameId)
         {
-            var gameCategories = _videoGameCategoryRepository.GetAll().Where(x => x.GameId == gameId).ToList();
-
-            if (gameCategories == null)
-                return null;
-
-            return gameCategories;
-        }
-
-        public IList<VideoGameGenre> GetVideoGameGenresByGameId(int gameId)
-        {
-            var gameGenres = _videoGameGenreRepository.GetAll().Where(x => x.GameId == gameId).ToList();
+            var gameGenres = _gameGenreRepository.GetAll().Where(x => x.GameId == gameId).ToList();
 
             if (gameGenres == null)
                 return null;
@@ -249,9 +218,9 @@ namespace GamerAssistant.Games
             return gameGenres;
         }
 
-        public IList<VideoPlatform> GetVideoPlatforms()
+        public IList<Platform> GetPlatforms()
         {
-            var platforms = _videoPlatformRepository.GetAll().ToList();
+            var platforms = _platformRepository.GetAll().ToList();
 
             if (platforms == null)
                 return null;
@@ -259,19 +228,9 @@ namespace GamerAssistant.Games
             return platforms;
         }
 
-        public IList<VideoCategory> GetVideoCategories()
+        public IList<Genre> GetGenres()
         {
-            var categories = _videoCategoryRepository.GetAll().ToList();
-
-            if (categories == null)
-                return null;
-
-            return categories;
-        }
-
-        public IList<VideoGenre> GetVideoGenres()
-        {
-            var genres = _videoGenreRepository.GetAll().ToList();
+            var genres = _genreRepository.GetAll().ToList();
 
             if (genres == null)
                 return null;
@@ -279,49 +238,38 @@ namespace GamerAssistant.Games
             return genres;
         }
 
-        public void AddVideoGame(VideoGame game)
+        public Genre AddGenre(Genre genre)
         {
-            _videoGameRepository.Insert(game);
+            _genreRepository.InsertAndGetId(genre);
+
+            return genre;
         }
 
-        public void UpdateVideoGame(VideoGame game)
+        public void AddGameGenre(GameGenre gameGenre)
         {
-            _videoGameRepository.Update(game);
+            _gameGenreRepository.Insert(gameGenre);
         }
 
-        public void DeleteVideoGameById(int gameId)
+        public void DeleteGameGenreById(int gameGenreId)
         {
-            _videoGameRepository.Delete(gameId);
+            _gameGenreRepository.Delete(gameGenreId);
         }
 
-        public void AddVideoGameCategory(VideoGameCategory gameCategory)
+        public Platform AddPlatform(Platform platform)
         {
-            _videoGameCategoryRepository.Insert(gameCategory);
+            _platformRepository.InsertAndGetId(platform);
+
+            return platform;
         }
 
-        public void DeleteVideoGameCategoryById(int gameCategoryId)
+        public void AddGamePlatform(GamePlatform gamePlatform)
         {
-            _videoGameCategoryRepository.Delete(gameCategoryId);
+            _gamePlatformRepository.Insert(gamePlatform);
         }
 
-        public void AddVideoGameGenre(VideoGameGenre gameGenre)
+        public void DeleteGamePlatformById(int gamePlatformId)
         {
-            _videoGameGenreRepository.Insert(gameGenre);
-        }
-
-        public void DeleteVideoGameGenreById(int gameGenreId)
-        {
-            _videoGameGenreRepository.Delete(gameGenreId);
-        }
-
-        public void AddVideoGamePlatform(VideoGamePlatform gamePlatform)
-        {
-            _videoGamePlatformRepository.Insert(gamePlatform);
-        }
-
-        public void DeleteVideoGamePlatformById(int gamePlatformId)
-        {
-            _videoGamePlatformRepository.Delete(gamePlatformId);
+            _gamePlatformRepository.Delete(gamePlatformId);
         }
 
     }
