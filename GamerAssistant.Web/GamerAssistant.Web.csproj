@@ -2771,6 +2771,7 @@
     <Compile Include="Models\Common\Modals\ModalHeaderViewModel.cs" />
     <Compile Include="Models\Events\EventListViewModel.cs" />
     <Compile Include="Models\Friends\FriendListViewModel.cs" />
+    <Compile Include="Models\Games\GameListsViewModel.cs" />
     <Compile Include="Models\Games\GameViewModel.cs" />
     <Compile Include="Models\Layout\RightSideBarViewModel.cs" />
     <Compile Include="Models\Account\LoginFormViewModel.cs" />

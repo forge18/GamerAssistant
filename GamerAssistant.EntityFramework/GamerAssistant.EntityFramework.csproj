@@ -173,6 +173,18 @@
     <Compile Include="Migrations\201709260107133_RemoveExpansionsTable.Designer.cs">
       <DependentUpon>201709260107133_RemoveExpansionsTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709300028549_ChangesToGames.cs" />
+    <Compile Include="Migrations\201709300028549_ChangesToGames.Designer.cs">
+      <DependentUpon>201709300028549_ChangesToGames.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709300051396_UpdateUserFavorite.cs" />
+    <Compile Include="Migrations\201709300051396_UpdateUserFavorite.Designer.cs">
+      <DependentUpon>201709300051396_UpdateUserFavorite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709300216505_AddingPendingApprovalToUserFriend.cs" />
+    <Compile Include="Migrations\201709300216505_AddingPendingApprovalToUserFriend.Designer.cs">
+      <DependentUpon>201709300216505_AddingPendingApprovalToUserFriend.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\AbpZeroDbMigrator.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="GamerAssistantDataModule.cs" />
@@ -227,6 +239,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709260107133_RemoveExpansionsTable.resx">
       <DependentUpon>201709260107133_RemoveExpansionsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709300028549_ChangesToGames.resx">
+      <DependentUpon>201709300028549_ChangesToGames.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709300051396_UpdateUserFavorite.resx">
+      <DependentUpon>201709300051396_UpdateUserFavorite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709300216505_AddingPendingApprovalToUserFriend.resx">
+      <DependentUpon>201709300216505_AddingPendingApprovalToUserFriend.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

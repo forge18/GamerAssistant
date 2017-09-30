@@ -6,10 +6,6 @@ namespace GamerAssistant.Users
     {
         public int UserId { get; set; }
 
-        public int TabletopGameId { get; set; }
-
-        public int VideoGameId { get; set; }
-
-        public string Comment { get; set; }
+        public int GameId { get; set; }
     }
 }

@@ -196,24 +196,49 @@ namespace GamerAssistant.Users
             return userGames;
         }
 
-        public void AddFavoriteById(UserFavorite favorite)
+        public UserFriend GetFriendRequestById(int userId, int friendId)
+        {
+            var friendRequest = _userFriendRepository.GetAll().FirstOrDefault(x => x.UserId == userId && x.FriendUserId == friendId && x.PendingApproval);
+
+            if (friendRequest == null)
+                return null;
+
+            return friendRequest;
+        }
+
+        public UserFriend GetActiveFriendById(int userId, int friendId)
+        {
+            var friend = _userFriendRepository.GetAll().FirstOrDefault(x => x.UserId == userId && x.FriendUserId == friendId && !x.PendingApproval);
+
+            if (friend == null)
+                return null;
+
+            return friend;
+        }
+
+        public void AddFavorite(UserFavorite favorite)
         {
             _userFavoriteRepository.Insert(favorite);
         }
 
-        public void DeleteFavorite(int gameId)
+        public void DeleteFavoriteById(int gameId)
         {
             _userFavoriteRepository.Delete(gameId);
         }
 
-        public void AddFriendById(UserFriend friend)
+        public void AddFriend(UserFriend userFriend)
         {
-            _userFriendRepository.Insert(friend);
+            _userFriendRepository.Insert(userFriend);
         }
 
-        public void DeleteFriendById(int userId)
+        public void UpdateFriend(UserFriend userFriend)
         {
-            _userFriendRepository.Delete(userId);
+            _userFriendRepository.Update(userFriend);
+        }
+
+        public void DeleteFriendById(int userFriendId)
+        {
+            _userFriendRepository.Delete(userFriendId);
         }
 
         public void AddGameToUser(UserGame userGame)

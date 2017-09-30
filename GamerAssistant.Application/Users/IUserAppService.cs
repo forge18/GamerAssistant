@@ -28,17 +28,24 @@ namespace GamerAssistant.Users
 
         IList<UserGame> GetUsersByGameId(int gameId);
 
+        UserFriend GetFriendRequestById(int userId, int friendId);
+
+        UserFriend GetActiveFriendById(int userId, int friendId);
+
         //Add favorite
-        void AddFavoriteById(UserFavorite favorite);
+        void AddFavorite(UserFavorite favorite);
 
         //Delete favorite
-        void DeleteFavorite(int gameId);
+        void DeleteFavoriteById(int gameId);
 
         //Add friend
-        void AddFriendById(UserFriend friend);
+        void AddFriend(UserFriend userFriend);
+
+        //Update friend
+        void UpdateFriend(UserFriend userFriend);
 
         //Delete friend
-        void DeleteFriendById(int userId);
+        void DeleteFriendById(int userFriendId);
 
         //Add game
         void AddGameToUser(UserGame userGame);

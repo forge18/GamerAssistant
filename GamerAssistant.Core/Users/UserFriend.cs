@@ -9,6 +9,8 @@ namespace GamerAssistant.Users
 
         public int FriendUserId { get; set; }
 
+        public bool PendingApproval { get; set; }
+
         public DateTime AddedOn { get; set; }
     }
 }

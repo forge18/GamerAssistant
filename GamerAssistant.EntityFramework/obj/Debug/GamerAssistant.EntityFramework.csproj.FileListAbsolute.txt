@@ -129,3 +129,6 @@ D:\src\GamerAssistant\GamerAssistant.EntityFramework\obj\Debug\GamerAssistant.En
 D:\src\GamerAssistant\GamerAssistant.EntityFramework\obj\Debug\GamerAssistant.EntityFramework.pdb
 D:\src\GamerAssistant\GamerAssistant.EntityFramework\obj\Debug\GamerAssistant.Migrations.RefactorCodeAndRemoveUnneededDataPoints.resources
 D:\src\GamerAssistant\GamerAssistant.EntityFramework\obj\Debug\GamerAssistant.Migrations.RemoveExpansionsTable.resources
+D:\src\GamerAssistant\GamerAssistant.EntityFramework\obj\Debug\GamerAssistant.Migrations.ChangesToGames.resources
+D:\src\GamerAssistant\GamerAssistant.EntityFramework\obj\Debug\GamerAssistant.Migrations.UpdateUserFavorite.resources
+D:\src\GamerAssistant\GamerAssistant.EntityFramework\obj\Debug\GamerAssistant.Migrations.AddingPendingApprovalToUserFriend.resources
