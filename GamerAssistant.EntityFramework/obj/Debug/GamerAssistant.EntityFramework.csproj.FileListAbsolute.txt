@@ -132,3 +132,6 @@ D:\src\GamerAssistant\GamerAssistant.EntityFramework\obj\Debug\GamerAssistant.Mi
 D:\src\GamerAssistant\GamerAssistant.EntityFramework\obj\Debug\GamerAssistant.Migrations.ChangesToGames.resources
 D:\src\GamerAssistant\GamerAssistant.EntityFramework\obj\Debug\GamerAssistant.Migrations.UpdateUserFavorite.resources
 D:\src\GamerAssistant\GamerAssistant.EntityFramework\obj\Debug\GamerAssistant.Migrations.AddingPendingApprovalToUserFriend.resources
+D:\src\GamerAssistant\GamerAssistant.EntityFramework\obj\Debug\GamerAssistant.Migrations.UpdateToLocationFields.resources
+D:\src\GamerAssistant\GamerAssistant.EntityFramework\obj\Debug\GamerAssistant.Migrations.RemoveLocationFromProposal.resources
+D:\src\GamerAssistant\GamerAssistant.EntityFramework\obj\Debug\GamerAssistant.Migrations.AddRespondedToEventUser.resources

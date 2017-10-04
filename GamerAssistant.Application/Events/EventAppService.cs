@@ -39,6 +39,15 @@ namespace GamerAssistant.Events
             return events;
         }
 
+        public Event GetEventById(int eventId)
+        {
+            var item = _eventRepository.GetAll().FirstOrDefault(x => x.Id == eventId);
+            if (item == null)
+                return null;
+
+            return item;
+        }
+
         public IList<EventGame> GetEventsByGameId(int gameId)
         {
             var gameEvents = _eventGameRepository.GetAll().Where(x => x.GameId == gameId).ToList();
@@ -91,6 +100,20 @@ namespace GamerAssistant.Events
                 return null;
 
             return users;
+        }
+
+        public EventUser GetEventInviteById(int eventUserId)
+        {
+            var eventUser = _eventUserRepository.GetAll().FirstOrDefault(x => x.Id == eventUserId);
+            if (eventUser == null)
+                return null;
+
+            return eventUser;
+        }
+
+        public void UpdateEventInvite(EventUser eventInvite)
+        {
+            _eventUserRepository.Update(eventInvite);
         }
 
         public void AddEvent(Event eventItem)

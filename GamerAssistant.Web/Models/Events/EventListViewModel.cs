@@ -11,18 +11,26 @@ namespace GamerAssistant.Web.Models.Events
             DateOptions = new List<DateOption>();
             Games = new List<Game>();
             Tasks = new List<Task>();
-            EventUsers = new List<EventUser>();
+            EventInvitees = new List<EventInvitee>();
         }
 
         public int EventId { get; set; }
 
         public string Description { get; set; }
 
-        public DateTime StartDateTime { get; set; }
+        public DateTime? StartDateTime { get; set; }
 
-        public DateTime EndDateTime { get; set; }
+        public DateTime? EndDateTime { get; set; }
 
-        public string Location { get; set; }
+        public string LocationNickname { get; set; }
+
+        public string Address { get; set; }
+
+        public string City { get; set; }
+
+        public string State { get; set; }
+
+        public string Zip { get; set; }
 
 
 
@@ -34,7 +42,7 @@ namespace GamerAssistant.Web.Models.Events
 
         public IList<Task> Tasks { get; set; }
 
-        public IList<EventUser> EventUsers { get; set; }
+        public IList<EventInvitee> EventInvitees { get; set; }
 
 
 
@@ -42,9 +50,13 @@ namespace GamerAssistant.Web.Models.Events
 
         public class Attachment
         {
+            public int Id { get; set; }
+
+            public string Description { get; set; }
+
             public string AttachmentUrl { get; set; }
 
-            public DateTime UpdatedOn { get; set; }
+            public DateTime AddedOn { get; set; }
 
             public int OwnerId { get; set; }
 
@@ -53,11 +65,11 @@ namespace GamerAssistant.Web.Models.Events
 
         public class DateOption
         {
+            public int Id { get; set; }
+
             public DateTime StartDate { get; set; }
 
             public DateTime EndDate { get; set; }
-
-            public string Location { get; set; }
 
             public int OwnerId { get; set; }
 
@@ -66,6 +78,10 @@ namespace GamerAssistant.Web.Models.Events
 
         public class Game
         {
+            public int Id { get; set; }
+
+            public int EventId { get; set; }
+
             public int GameId { get; set; }
 
             public string GameName { get; set; }
@@ -79,7 +95,7 @@ namespace GamerAssistant.Web.Models.Events
 
         public class Task
         {
-            public int TaskId { get; set; }
+            public int Id { get; set; }
 
             public string Name { get; set; }
 
@@ -88,24 +104,42 @@ namespace GamerAssistant.Web.Models.Events
             public int UserId { get; set; }
 
             public string UserName { get; set; }
+
+            public string CompletionComments { get; set; }
+
+            public DateTime CompletedOn { get; set; }
         }
 
-        public class EventUser
+        public class EventInvitee
         {
+            public int Id { get; set; }
+
+            public int EventId { get; set; }
+
             public int UserId { get; set; }
 
             public string UserName { get; set; }
 
+            public bool Responded { get; set; }
+
+            public bool Accepted { get; set; }
+
             public bool Attending { get; set; }
+
+            public string DeclineComment { get; set; }
         }
 
         public class Vote
         {
+            public int Id { get; set; }
+
             public int UserId { get; set; }
 
             public string UserName { get; set; }
 
             public int VoteStatus { get; set; }
+
+            public DateTime DueDate { get; set; }
         }
 
         #endregion

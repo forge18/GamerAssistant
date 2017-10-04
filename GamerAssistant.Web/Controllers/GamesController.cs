@@ -34,13 +34,32 @@ namespace GamerAssistant.Web.Controllers
             return View();
         }
 
-        public JsonResult GetGamesData(int userId)
+        public void ImportBggCollection(int id)
+        {
+            //Get the user id
+            var userId = id;
+
+            //Get the games in the bgg database
+            var bggCollection = _sourceService.GetBggCollectionByUserId(userId);
+            var gameCollection = _userService.GetGamesById(userId);
+
+            //Get a string of the new game ids to send in an api call for game details
+            var gameIds = IdentifyNewBggGames(bggCollection, new BggGameSearch(), gameCollection);
+
+            //Get game details for all games in collection
+            var gameDetails = _sourceService.GetGameDetailFromBggByGameId(gameIds);
+
+            //Add the games to the database
+            AddGames(id, gameDetails);
+        }
+
+        public JsonResult GetGamesLists(int userId)
         {
             try
             {
-                var games = GetGamesList(userId, "collection");
-                var favoriteGames = GetGamesList(userId, "favorites");
-                var friendGames = GetFriendGamesList(userId);
+                var games = GetCollection(userId, "collection");
+                var favoriteGames = GetCollection(userId, "favorites");
+                var friendGames = GetFriendCollections(userId);
 
                 if (games != null)
                 {
@@ -66,150 +85,7 @@ namespace GamerAssistant.Web.Controllers
             }
         }
 
-        public JsonResult SearchBggGames(int userId, string query)
-        {
-            //Initialize the model
-            var model = new List<GameViewModel>();
-
-            //Get the search data from bgg
-            var searchData = _sourceService.SearchBggGames(query);
-            //Get the user's collection data
-            var gameCollection = _userService.GetGamesById(userId);
-
-            if (searchData != null && gameCollection != null)
-            {
-                //Determine which games in the search results are not in the user's collection
-                var gameIds = IdentifyNewBggGames(new BggGameCollection(), searchData, gameCollection);
-
-                if (gameIds != null)
-                {
-                    //Get game details for all new games
-                    var gameDetails = _sourceService.GetGameDetailFromBggByGameId(gameIds);
-                    model = FormatBggGameData(gameDetails);
-
-                    if (model != null)
-                        return Json(JsonResponseFactory.SuccessResponse(model), JsonRequestBehavior.AllowGet);
-                }
-            }
-
-            return Json(JsonResponseFactory.ErrorResponse(""), JsonRequestBehavior.AllowGet);
-        }
-
-        public List<GameViewModel> FormatBggGameData(BggGameDetail games)
-        {
-            //Initialize the model
-            var model = new List<GameViewModel>();
-
-            //Set the gamedetails variable with dataset
-            var gameDetails = games;
-
-            foreach (var item in gameDetails.Items)
-            {
-                //Prep data points
-                var gameType = GetGameType(item.Type);
-                var name = item.Names.Select(x => x.value).FirstOrDefault();
-                var minPlayers = item.MinGamePlayers.Select(x => x.value).FirstOrDefault();
-                var maxPlayers = item.MaxGamePlayers.Select(x => x.value).FirstOrDefault();
-                var yearPublished = item.YearGamePublished.Select(x => x.value).FirstOrDefault();
-
-                //Create the model
-                var game = new GameViewModel()
-                {
-                    Id = Int32.Parse(item.Id),
-                    GameType = gameType,
-                    Name = name,
-                    Description = item.Description,
-                    MinPlayers = int.Parse(minPlayers),
-                    MaxPlayers = int.Parse(maxPlayers),
-                    ImageUrl = item.Image,
-                    ThumbnailUrl = item.Thumbnail,
-                    IsExpansion = gameType == "BoardGameExpansion",
-                    YearPublished = int.Parse(yearPublished)
-                };
-
-                //If the game is an expansion, find the parent game id
-                if (game.IsExpansion)
-                {
-                    var parentGameId = item.Links.Where(x => x.Type == "boardgameexpansion" && x.Inbound == "true").FirstOrDefault().Id;
-                    if (parentGameId != null)
-                        game.ParentGameId = int.Parse(parentGameId);
-                }
-
-                //Determine if categories are associated with the game
-                var categories = item.Links.Where(x => x.Type == "boardgamecategory");
-
-                //If there are categories, add them to the game
-                if (categories != null)
-                {
-                    foreach (var category in categories)
-                    {
-                        var gameCategory = new GameViewModel.Category()
-                        {
-                            Id = int.Parse(category.Id),
-                            Name = category.value
-                        };
-                        game.Categories.Add(gameCategory);
-                    }
-                }
-
-                //Determine if genres are associated with the game
-                var genres = item.Links.Where(x => x.Type == "videogamegenre");
-
-                //If there are genres, add them to the game
-                if (genres != null)
-                {
-                    foreach (var genre in genres)
-                    {
-                        var gameGenre = new GameViewModel.Genre()
-                        {
-                            Id = int.Parse(genre.Id),
-                            Name = genre.value
-                        };
-                        game.Genres.Add(gameGenre);
-                    }
-                }
-
-                //Determine if mechanics are associated with the game
-                var mechanics = item.Links.Where(x => x.Type == "boardgamemechanic");
-
-                //If there are mechanics, add them to the game
-                if (mechanics != null)
-                {
-                    foreach (var mechanic in mechanics)
-                    {
-                        var gameMechanic = new GameViewModel.Mechanic()
-                        {
-                            Id = int.Parse(mechanic.Id),
-                            Name = mechanic.value
-                        };
-                        game.Mechanics.Add(gameMechanic);
-                    }
-                }
-
-                //Determine if platforms are associated with the game
-                var platforms = item.Links.Where(x => x.Type == "videogameplatform");
-
-                //If there are platforms, add them to the game
-                if (platforms != null)
-                {
-                    foreach (var platform in platforms)
-                    {
-                        var gamePlatform = new GameViewModel.Platform()
-                        {
-                            Id = int.Parse(platform.Id),
-                            Name = platform.value
-                        };
-                        game.Platforms.Add(gamePlatform);
-                    }
-                }
-
-                model.Add(game);
-            }
-
-            return model;
-        }
-
-        public List<GameViewModel> GetGamesList(int id, string type)
+        public List<GameViewModel> GetCollection(int id, string type)
         {
             //Initialize the model
             var model = new List<GameViewModel>();
@@ -350,14 +226,14 @@ namespace GamerAssistant.Web.Controllers
             return model;
         }
 
-        public List<GameViewModel> GetFriendGamesList(int id)
+        public List<GameViewModel> GetFriendCollections(int id)
         {
             var combinedFriendGames = new List<GameViewModel>();
 
             var friends = _userService.GetFriendsById(id);
             foreach (var friend in friends)
             {
-                var friendGames = GetGamesList(friend.UserId, "collection");
+                var friendGames = GetCollection(friend.UserId, "collection");
                 foreach (var game in friendGames)
                 {
                     if (!combinedFriendGames.Contains(game))
@@ -371,84 +247,36 @@ namespace GamerAssistant.Web.Controllers
             return combinedFriendGames;
         }
 
-        public string IdentifyNewBggGames(BggGameCollection bggCollection, BggGameSearch bggSearch, IList<UserGame> gameCollection)
+        public JsonResult SearchGames(int userId, string query)
         {
-            //Create an empty string array
-            IList<string> gameIds = new List<string>();
-            //Add each game's id to the list
-            foreach (var game in bggCollection.Items)
-            {
-                //Check to see if the game exists in the user's collection
-                var gameExistsInCollection = gameCollection.Any(x => x.GameId == game.ObjectId);
+            //Initialize the model
+            var model = new List<GameViewModel>();
 
-                if (!gameExistsInCollection)
-                {
-                    //Add the game id to the string list
-                    string item = game.ObjectId.ToString();
-                    gameIds.Add(item);
-                }
-            };
-            //Add each game's id to the list
-            foreach (var game in bggSearch.Items)
-            {
-                //Check to see if the game exists in the user's collection
-                var gameExistsInSearch = gameCollection.Any(x => x.GameId == game.Id);
-
-                if (!gameExistsInSearch)
-                {
-                    //Add the game id to the string list
-                    string item = game.Id.ToString();
-                    gameIds.Add(item);
-                }
-            };
-            //Convert the game id list to a comma delimited string
-            string gameIdsCombined = string.Join(",", gameIds);
-
-            return gameIdsCombined;
-        }
-
-        public string GetGameType(string gameType)
-        {
-            var type = "Invalid";
-            switch (gameType)
-            {
-                case "boardgame":
-                    type = "BoardGame";
-                    break;
-                case "boardgameexpansion":
-                    type = "BoardGameExpansion";
-                    break;
-                case "videogame":
-                    type = "VideoGame";
-                    break;
-                case "rpgitem":
-                    type = "Rpg";
-                    break;
-            };
-
-            return type;
-        }
-
-        public void ImportBggCollection(int id)
-        {
-            //Get the user id
-            var userId = id;
-
-            //Get the games in the bgg database
-            var bggCollection = _sourceService.GetBggCollectionByUserId(userId);
+            //Get the search data from bgg
+            var searchData = _sourceService.SearchBggGames(query);
+            //Get the user's collection data
             var gameCollection = _userService.GetGamesById(userId);
 
-            //Get a string of the new game ids to send in an api call for game details
-            var gameIds = IdentifyNewBggGames(bggCollection, new BggGameSearch(), gameCollection);
+            if (searchData != null && gameCollection != null)
+            {
+                //Determine which games in the search results are not in the user's collection
+                var gameIds = IdentifyNewBggGames(new BggGameCollection(), searchData, gameCollection);
 
-            //Get game details for all games in collection
-            var gameDetails = _sourceService.GetGameDetailFromBggByGameId(gameIds);
+                if (gameIds != null)
+                {
+                    //Get game details for all new games
+                    var gameDetails = _sourceService.GetGameDetailFromBggByGameId(gameIds);
+                    model = FormatBggGameData(gameDetails);
 
-            //Add the games to the database
-            AddBggGames(id, gameDetails);
+                    if (model != null)
+                        return Json(JsonResponseFactory.SuccessResponse(model), JsonRequestBehavior.AllowGet);
+                }
+            }
+
+            return Json(JsonResponseFactory.ErrorResponse(""), JsonRequestBehavior.AllowGet);
         }
 
-        public void AddBggGames(int userId, BggGameDetail gameDetails)
+        public void AddGames(int userId, BggGameDetail gameDetails)
         {
             //Get the games in the app database
             var gameDatabase = _gameService.GetGamesList();
@@ -799,6 +627,177 @@ namespace GamerAssistant.Web.Controllers
                 _userService.DeleteFavoriteById(favoriteGame.Id);
         }
 
+        public List<GameViewModel> FormatBggGameData(BggGameDetail games)
+        {
+            //Initialize the model
+            var model = new List<GameViewModel>();
+
+            //Set the gamedetails variable with dataset
+            var gameDetails = games;
+
+            foreach (var item in gameDetails.Items)
+            {
+                //Prep data points
+                var gameType = GetGameType(item.Type);
+                var name = item.Names.Select(x => x.value).FirstOrDefault();
+                var minPlayers = item.MinGamePlayers.Select(x => x.value).FirstOrDefault();
+                var maxPlayers = item.MaxGamePlayers.Select(x => x.value).FirstOrDefault();
+                var yearPublished = item.YearGamePublished.Select(x => x.value).FirstOrDefault();
+
+                //Create the model
+                var game = new GameViewModel()
+                {
+                    Id = Int32.Parse(item.Id),
+                    GameType = gameType,
+                    Name = name,
+                    Description = item.Description,
+                    MinPlayers = int.Parse(minPlayers),
+                    MaxPlayers = int.Parse(maxPlayers),
+                    ImageUrl = item.Image,
+                    ThumbnailUrl = item.Thumbnail,
+                    IsExpansion = gameType == "BoardGameExpansion",
+                    YearPublished = int.Parse(yearPublished)
+                };
+
+                //If the game is an expansion, find the parent game id
+                if (game.IsExpansion)
+                {
+                    var parentGameId = item.Links.Where(x => x.Type == "boardgameexpansion" && x.Inbound == "true").FirstOrDefault().Id;
+                    if (parentGameId != null)
+                        game.ParentGameId = int.Parse(parentGameId);
+                }
+
+                //Determine if categories are associated with the game
+                var categories = item.Links.Where(x => x.Type == "boardgamecategory");
+
+                //If there are categories, add them to the game
+                if (categories != null)
+                {
+                    foreach (var category in categories)
+                    {
+                        var gameCategory = new GameViewModel.Category()
+                        {
+                            Id = int.Parse(category.Id),
+                            Name = category.value
+                        };
+                        game.Categories.Add(gameCategory);
+                    }
+                }
+
+                //Determine if genres are associated with the game
+                var genres = item.Links.Where(x => x.Type == "videogamegenre");
+
+                //If there are genres, add them to the game
+                if (genres != null)
+                {
+                    foreach (var genre in genres)
+                    {
+                        var gameGenre = new GameViewModel.Genre()
+                        {
+                            Id = int.Parse(genre.Id),
+                            Name = genre.value
+                        };
+                        game.Genres.Add(gameGenre);
+                    }
+                }
+
+                //Determine if mechanics are associated with the game
+                var mechanics = item.Links.Where(x => x.Type == "boardgamemechanic");
+
+                //If there are mechanics, add them to the game
+                if (mechanics != null)
+                {
+                    foreach (var mechanic in mechanics)
+                    {
+                        var gameMechanic = new GameViewModel.Mechanic()
+                        {
+                            Id = int.Parse(mechanic.Id),
+                            Name = mechanic.value
+                        };
+                        game.Mechanics.Add(gameMechanic);
+                    }
+                }
+
+                //Determine if platforms are associated with the game
+                var platforms = item.Links.Where(x => x.Type == "videogameplatform");
+
+                //If there are platforms, add them to the game
+                if (platforms != null)
+                {
+                    foreach (var platform in platforms)
+                    {
+                        var gamePlatform = new GameViewModel.Platform()
+                        {
+                            Id = int.Parse(platform.Id),
+                            Name = platform.value
+                        };
+                        game.Platforms.Add(gamePlatform);
+                    }
+                }
+
+                model.Add(game);
+            }
+
+            return model;
+        }
+
+        public string IdentifyNewBggGames(BggGameCollection bggCollection, BggGameSearch bggSearch, IList<UserGame> gameCollection)
+        {
+            //Create an empty string array
+            IList<string> gameIds = new List<string>();
+            //Add each game's id to the list
+            foreach (var game in bggCollection.Items)
+            {
+                //Check to see if the game exists in the user's collection
+                var gameExistsInCollection = gameCollection.Any(x => x.GameId == game.ObjectId);
+
+                if (!gameExistsInCollection)
+                {
+                    //Add the game id to the string list
+                    string item = game.ObjectId.ToString();
+                    gameIds.Add(item);
+                }
+            };
+            //Add each game's id to the list
+            foreach (var game in bggSearch.Items)
+            {
+                //Check to see if the game exists in the user's collection
+                var gameExistsInSearch = gameCollection.Any(x => x.GameId == game.Id);
+
+                if (!gameExistsInSearch)
+                {
+                    //Add the game id to the string list
+                    string item = game.Id.ToString();
+                    gameIds.Add(item);
+                }
+            };
+            //Convert the game id list to a comma delimited string
+            string gameIdsCombined = string.Join(",", gameIds);
+
+            return gameIdsCombined;
+        }
+
+        public string GetGameType(string gameType)
+        {
+            var type = "Invalid";
+            switch (gameType)
+            {
+                case "boardgame":
+                    type = "BoardGame";
+                    break;
+                case "boardgameexpansion":
+                    type = "BoardGameExpansion";
+                    break;
+                case "videogame":
+                    type = "VideoGame";
+                    break;
+                case "rpgitem":
+                    type = "Rpg";
+                    break;
+            };
+
+            return type;
+        }
     }
 }
 

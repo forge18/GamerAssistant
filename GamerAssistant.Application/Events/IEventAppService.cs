@@ -7,6 +7,8 @@ namespace GamerAssistant.Events
     {
         IList<Event> GetEventsList();
 
+        Event GetEventById(int eventId);
+
         IList<EventGame> GetEventsByGameId(int gameId);
 
         IList<EventAttachment> GetAttachmentsByEventId(int eventId);
@@ -18,6 +20,8 @@ namespace GamerAssistant.Events
         IList<EventTask> GetTasksByEventId(int eventId);
 
         IList<EventUser> GetUsersByEventId(int eventId);
+
+        EventUser GetEventInviteById(int eventUserId);
 
         void AddEvent(Event eventItem);
 

@@ -9,10 +9,6 @@ namespace GamerAssistant.Events
 
         public DateTime EndDateTime { get; set; }
 
-        public string Location { get; set; }
-
-        public string Comment { get; set; }
-
         public int OwnerId { get; set; }
     }
 }

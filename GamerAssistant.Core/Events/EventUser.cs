@@ -9,6 +9,8 @@ namespace GamerAssistant.Events
 
         public int UserId { get; set; }
 
+        public bool Responded { get; set; }
+
         public bool Accepted { get; set; }
 
         public bool Attended { get; set; }

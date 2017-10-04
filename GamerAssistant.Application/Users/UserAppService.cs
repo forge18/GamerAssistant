@@ -169,9 +169,28 @@ namespace GamerAssistant.Users
             return userGames;
         }
 
-        public IList<UserVote> GetAllVotesById(int userId)
+        public UserVote GetVoteById(int userVoteId)
         {
-            var userVotes = _userVoteRepository.GetAll().ToList();
+            var userVote = _userVoteRepository.GetAll().FirstOrDefault(x => x.Id == userVoteId);
+            if (userVote == null)
+                return null;
+
+            return userVote;
+        }
+
+        public IList<UserVote> GetVotesByUserId(int userId)
+        {
+            var userVotes = _userVoteRepository.GetAll().Where(x => x.UserId == userId).ToList();
+            if (userVotes == null)
+                return null;
+
+            return userVotes;
+        }
+
+        public IList<UserVote> GetVotesByEventGameId(int eventGameId)
+        {
+            var userVotes = _userVoteRepository.GetAll().Where(x => x.EventGameId == eventGameId).ToList();
+
             if (userVotes == null)
                 return null;
 
@@ -215,6 +234,7 @@ namespace GamerAssistant.Users
 
             return friend;
         }
+
 
         public void AddFavorite(UserFavorite favorite)
         {

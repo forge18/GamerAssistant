@@ -185,6 +185,18 @@
     <Compile Include="Migrations\201709300216505_AddingPendingApprovalToUserFriend.Designer.cs">
       <DependentUpon>201709300216505_AddingPendingApprovalToUserFriend.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710040017218_UpdateToLocationFields.cs" />
+    <Compile Include="Migrations\201710040017218_UpdateToLocationFields.Designer.cs">
+      <DependentUpon>201710040017218_UpdateToLocationFields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710040132424_RemoveLocationFromProposal.cs" />
+    <Compile Include="Migrations\201710040132424_RemoveLocationFromProposal.Designer.cs">
+      <DependentUpon>201710040132424_RemoveLocationFromProposal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710040147115_AddRespondedToEventUser.cs" />
+    <Compile Include="Migrations\201710040147115_AddRespondedToEventUser.Designer.cs">
+      <DependentUpon>201710040147115_AddRespondedToEventUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\AbpZeroDbMigrator.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="GamerAssistantDataModule.cs" />
@@ -248,6 +260,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709300216505_AddingPendingApprovalToUserFriend.resx">
       <DependentUpon>201709300216505_AddingPendingApprovalToUserFriend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710040017218_UpdateToLocationFields.resx">
+      <DependentUpon>201710040017218_UpdateToLocationFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710040132424_RemoveLocationFromProposal.resx">
+      <DependentUpon>201710040132424_RemoveLocationFromProposal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710040147115_AddRespondedToEventUser.resx">
+      <DependentUpon>201710040147115_AddRespondedToEventUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

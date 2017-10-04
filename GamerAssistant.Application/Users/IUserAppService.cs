@@ -20,8 +20,12 @@ namespace GamerAssistant.Users
         //Get game list by user id
         IList<UserGame> GetGamesById(int userId);
 
+        UserVote GetVoteById(int userVoteId);
+
         //Get all votes by user id
-        IList<UserVote> GetAllVotesById(int userId);
+        IList<UserVote> GetVotesByUserId(int userId);
+
+        IList<UserVote> GetVotesByEventGameId(int eventGameId);
 
         //Get all upcoming votes by user id
         IList<UserVote> GetUpcomingVotesById(int userId);
