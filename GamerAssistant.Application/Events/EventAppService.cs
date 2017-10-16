@@ -11,7 +11,7 @@ namespace GamerAssistant.Events
         private readonly IRepository<EventProposal> _eventDateOptionRepository;
         private readonly IRepository<EventGame> _eventGameRepository;
         private readonly IRepository<EventTask> _eventTaskRepository;
-        private readonly IRepository<EventUser> _eventUserRepository;
+        private readonly IRepository<EventInvite> _eventUserRepository;
 
         public EventAppService(
             IRepository<Event> eventRepository,
@@ -19,7 +19,7 @@ namespace GamerAssistant.Events
             IRepository<EventProposal> eventDateOptionRepository,
             IRepository<EventGame> eventGameRepository,
             IRepository<EventTask> eventTaskRepository,
-            IRepository<EventUser> eventUserRepository
+            IRepository<EventInvite> eventUserRepository
         )
         {
             _eventRepository = eventRepository;
@@ -66,7 +66,7 @@ namespace GamerAssistant.Events
             return attachments;
         }
 
-        public IList<EventProposal> GetDateOptionsByEventId(int eventId)
+        public IList<EventProposal> GetDateProposalByEventId(int eventId)
         {
             var dateOptions = _eventDateOptionRepository.GetAll().ToList();
             if (dateOptions == null)
@@ -93,7 +93,7 @@ namespace GamerAssistant.Events
             return tasks;
         }
 
-        public IList<EventUser> GetUsersByEventId(int eventId)
+        public IList<EventInvite> GetInvitesByEventId(int eventId)
         {
             var users = _eventUserRepository.GetAll().ToList();
             if (users == null)
@@ -102,7 +102,7 @@ namespace GamerAssistant.Events
             return users;
         }
 
-        public EventUser GetEventInviteById(int eventUserId)
+        public EventInvite GetEventInviteById(int eventUserId)
         {
             var eventUser = _eventUserRepository.GetAll().FirstOrDefault(x => x.Id == eventUserId);
             if (eventUser == null)
@@ -111,7 +111,7 @@ namespace GamerAssistant.Events
             return eventUser;
         }
 
-        public void UpdateEventInvite(EventUser eventInvite)
+        public void UpdateEventInvite(EventInvite eventInvite)
         {
             _eventUserRepository.Update(eventInvite);
         }
@@ -126,7 +126,7 @@ namespace GamerAssistant.Events
             _eventRepository.Update(eventItem);
         }
 
-        public void CancelEventById(int eventId)
+        public void DeleteEventById(int eventId)
         {
             _eventRepository.Delete(eventId);
         }
@@ -141,12 +141,12 @@ namespace GamerAssistant.Events
             _eventAttachmentRepository.Delete(attachmentId);
         }
 
-        public void AddDateOptionToEvent(EventProposal dateOption)
+        public void AddDateProposalToEvent(EventProposal dateOption)
         {
             _eventDateOptionRepository.Insert(dateOption);
         }
 
-        public void DeleteDateOptionFromEventById(int dateOptionEventId)
+        public void DeleteDateProposalFromEventById(int dateOptionEventId)
         {
             _eventDateOptionRepository.Delete(dateOptionEventId);
         }
@@ -176,12 +176,12 @@ namespace GamerAssistant.Events
             _eventTaskRepository.Delete(taskId);
         }
 
-        public void AddUserToEvent(EventUser eventUser)
+        public void AddInviteToEvent(EventInvite eventUser)
         {
             _eventUserRepository.Insert(eventUser);
         }
 
-        public void DeleteUserFromEventById(int eventUserId)
+        public void DeleteInviteFromEventById(int eventUserId)
         {
             _eventUserRepository.Delete(eventUserId);
         }

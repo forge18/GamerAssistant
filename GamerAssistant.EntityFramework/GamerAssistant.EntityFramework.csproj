@@ -197,6 +197,10 @@
     <Compile Include="Migrations\201710040147115_AddRespondedToEventUser.Designer.cs">
       <DependentUpon>201710040147115_AddRespondedToEventUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710082202565_UpdateEventInviteEntity.cs" />
+    <Compile Include="Migrations\201710082202565_UpdateEventInviteEntity.Designer.cs">
+      <DependentUpon>201710082202565_UpdateEventInviteEntity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\AbpZeroDbMigrator.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="GamerAssistantDataModule.cs" />
@@ -269,6 +273,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710040147115_AddRespondedToEventUser.resx">
       <DependentUpon>201710040147115_AddRespondedToEventUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710082202565_UpdateEventInviteEntity.resx">
+      <DependentUpon>201710082202565_UpdateEventInviteEntity.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

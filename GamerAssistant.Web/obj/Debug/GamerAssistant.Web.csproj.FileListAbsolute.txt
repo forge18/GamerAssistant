@@ -298,3 +298,4 @@ D:\src\GamerAssistant\GamerAssistant.Web\bin\zh\Hangfire.Core.resources.dll
 D:\src\GamerAssistant\GamerAssistant.Web\obj\Debug\GamerAssistant.Web.csprojResolveAssemblyReference.cache
 D:\src\GamerAssistant\GamerAssistant.Web\obj\Debug\GamerAssistant.Web.dll
 D:\src\GamerAssistant\GamerAssistant.Web\obj\Debug\GamerAssistant.Web.pdb
+D:\src\GamerAssistant\GamerAssistant.Web\bin\dotless.Core.dll

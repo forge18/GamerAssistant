@@ -1,0 +1,24 @@
+{
+  "name": "gameassistant",
+  "version": "1.0.0",
+  "description": "Gamer Assistant",
+  "main": "index.js",
+  "dependencies": {
+    "vue-tables-2": "^0.6.64",
+    "vuetify": "^0.16.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/forge18/GamerAssistant.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/forge18/GamerAssistant/issues"
+  },
+  "homepage": "https://github.com/forge18/GamerAssistant#readme"
+}

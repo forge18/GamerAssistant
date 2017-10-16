@@ -110,6 +110,10 @@
       <HintPath>..\packages\Castle.Windsor.4.0.0\lib\net45\Castle.Windsor.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="dotless.Core, Version=1.4.0.0, Culture=neutral, PublicKeyToken=96b446c9e63eae34, processorArchitecture=MSIL">
+      <HintPath>..\packages\dotless.1.4.0.0\lib\dotless.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
@@ -359,6 +363,7 @@
     <Content Include="css\themes\theme-teal.min.css" />
     <Content Include="css\themes\theme-yellow.css" />
     <Content Include="css\themes\theme-yellow.min.css" />
+    <Content Include="css\vuetify.css" />
     <Content Include="fonts\material-icons\materialicons.css" />
     <Content Include="fonts\roboto\roboto.css" />
     <Content Include="favicon.ico" />
@@ -2726,8 +2731,7 @@
     <Content Include="Views\Events\EventList\EventList.js" />
     <Content Include="Views\Events\EventScheduler\EventScheduler.js" />
     <Content Include="Views\Friends\FriendList\FriendList.js" />
-    <Content Include="Views\Games\GameList\GameList.js" />
-    <Content Include="Views\Games\GameMaintenance\GameMaintenance.js" />
+    <Content Include="Views\Home\Index.js" />
     <Content Include="Views\Roles\Index.js" />
     <Content Include="Views\Roles\_EditRoleModal.js" />
     <Content Include="Views\Shared\_Layout.css" />
@@ -2797,7 +2801,9 @@
     <Compile Include="Views\UrlChecker.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\web.config" />
+    <Content Include="Views\web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="packages.config">
       <SubType>Designer</SubType>
     </Content>
@@ -2912,7 +2918,6 @@
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Events\Index.cshtml" />
     <Content Include="Views\Friends\Index.cshtml" />
-    <Content Include="Views\Games\Index.cshtml" />
     <Content Include="Views\Tasks\Index.cshtml" />
     <Content Include="Views\Admin\AdminCategories\_AdminCategories.cshtml" />
     <Content Include="Views\Admin\AdminMechanics\_AdminMechanics.cshtml" />
@@ -2920,9 +2925,8 @@
     <Content Include="Views\Events\EventList\_EventList.cshtml" />
     <Content Include="Views\Events\EventScheduler\_EventScheduler.cshtml" />
     <Content Include="Views\Friends\FriendList\_FriendList.cshtml" />
-    <Content Include="Views\Games\GameList\_GameList.cshtml" />
-    <Content Include="Views\Games\GameMaintenance\_GameMaintenance.cshtml" />
     <Content Include="Views\Tasks\TaskList\_TaskList.cshtml" />
+    <Content Include="Views\Games\_Games.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -13,29 +13,29 @@ namespace GamerAssistant.Events
 
         IList<EventAttachment> GetAttachmentsByEventId(int eventId);
 
-        IList<EventProposal> GetDateOptionsByEventId(int eventId);
+        IList<EventProposal> GetDateProposalByEventId(int eventId);
 
         IList<EventGame> GetGamesByEventId(int eventId);
 
         IList<EventTask> GetTasksByEventId(int eventId);
 
-        IList<EventUser> GetUsersByEventId(int eventId);
+        IList<EventInvite> GetInvitesByEventId(int eventId);
 
-        EventUser GetEventInviteById(int eventUserId);
+        EventInvite GetEventInviteById(int eventUserId);
 
         void AddEvent(Event eventItem);
 
         void UpdateEvent(Event eventItem);
 
-        void CancelEventById(int eventId);
+        void DeleteEventById(int eventId);
 
         void AddAttachmentToEvent(EventAttachment eventAttachment);
 
         void DeleteAttachmentFromEventById(int attachmentId);
 
-        void AddDateOptionToEvent(EventProposal dateOption);
+        void AddDateProposalToEvent(EventProposal dateOption);
 
-        void DeleteDateOptionFromEventById(int dateOptionEventId);
+        void DeleteDateProposalFromEventById(int dateOptionEventId);
 
         void AddGameToEvent(EventGame eventGame);
 
@@ -47,8 +47,8 @@ namespace GamerAssistant.Events
 
         void DeleteTaskById(int taskId);
 
-        void AddUserToEvent(EventUser eventUser);
+        void AddInviteToEvent(EventInvite eventUser);
 
-        void DeleteUserFromEventById(int eventUserId);
+        void DeleteInviteFromEventById(int eventUserId);
     }
 }

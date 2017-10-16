@@ -56,10 +56,10 @@ namespace GamerAssistant.Web.Controllers
                     Zip = item.Zip
                 };
 
-                eventItem.EventInvitees = GetEventInvitees(item.Id);
+                eventItem.EventInvites = GetEventInvitees(item.Id);
                 eventItem.Games = GetEventGames(item.Id);
                 eventItem.Tasks = GetEventTasks(item.Id);
-                eventItem.DateOptions = GetEventProposedDates(item.Id);
+                eventItem.DateProposals = GetEventProposedDates(item.Id);
                 eventItem.Attachments = GetEventAttachments(item.Id);
 
                 model.Add(eventItem);
@@ -68,11 +68,11 @@ namespace GamerAssistant.Web.Controllers
             return model;
         }
 
-        public List<EventListViewModel.EventInvitee> GetEventInvitees(int eventId)
+        public List<EventListViewModel.EventInvite> GetEventInvitees(int eventId)
         {
-            var model = new List<EventListViewModel.EventInvitee>();
+            var model = new List<EventListViewModel.EventInvite>();
 
-            var invitees = _eventService.GetUsersByEventId(eventId);
+            var invitees = _eventService.GetInvitesByEventId(eventId);
 
             if (invitees != null && invitees.Count > 0)
             {
@@ -80,7 +80,7 @@ namespace GamerAssistant.Web.Controllers
                 {
                     var user = _userManager.GetUserByIdAsync(invitee.UserId);
 
-                    var eventInvitee = new EventListViewModel.EventInvitee()
+                    var eventInvitee = new EventListViewModel.EventInvite()
                     {
                         Id = invitee.Id,
                         UserId = invitee.UserId,
@@ -177,11 +177,11 @@ namespace GamerAssistant.Web.Controllers
             return model;
         }
 
-        public List<EventListViewModel.DateOption> GetEventProposedDates(int eventId)
+        public List<EventListViewModel.DateProposal> GetEventProposedDates(int eventId)
         {
-            var model = new List<EventListViewModel.DateOption>();
+            var model = new List<EventListViewModel.DateProposal>();
 
-            var dates = _eventService.GetDateOptionsByEventId(eventId);
+            var dates = _eventService.GetDateProposalByEventId(eventId);
 
             if (dates != null && dates.Count > 0)
             {
@@ -189,7 +189,7 @@ namespace GamerAssistant.Web.Controllers
                 {
                     var user = _userManager.GetUserByIdAsync(item.OwnerId);
 
-                    var eventDate = new EventListViewModel.DateOption()
+                    var eventDate = new EventListViewModel.DateProposal()
                     {
                         Id = item.Id,
                         StartDate = item.StartDateTime,
@@ -236,17 +236,149 @@ namespace GamerAssistant.Web.Controllers
 
         public void AddUpdateEvent(EventListViewModel model)
         {
+            EventStatus status = model.StartDateTime == null ? EventStatus.Proposed : EventStatus.Scheduled;
+
+            var item = new Event()
+            {
+                Id = 0,
+                Title = model.Title,
+                Description = model.Description,
+                LocationNickname = model.LocationNickname,
+                Address = model.Address,
+                City = model.City,
+                State = model.State,
+                Zip = model.Zip,
+                StartDateTime = model.StartDateTime,
+                EndDateTime = model.EndDateTime,
+                Status = status
+            };
+
+            _eventService.AddEvent(item);
+
+            foreach (var attachment in model.Attachments)
+            {
+                var attachmentItem = new EventAttachment()
+                {
+                    Id = 0,
+                    Description = attachment.Description,
+                    AttachmentUrl = attachment.AttachmentUrl,
+                    UpdatedOn = DateTime.Now,
+                    OwnerId = attachment.OwnerId
+                };
+
+                _eventService.AddAttachmentToEvent(attachmentItem);
+            }
+
+            foreach (var date in model.DateProposals)
+            {
+                var dateItem = new EventProposal()
+                {
+                    Id = 0,
+                    StartDateTime = date.StartDate,
+                    EndDateTime = date.EndDate,
+                    OwnerId = date.OwnerId
+                };
+
+                _eventService.AddDateProposalToEvent(dateItem);
+            }
+
+            foreach (var game in model.Games)
+            {
+                var gameItem = new EventGame()
+                {
+                    Id = 0,
+                    EventId = game.EventId,
+                    GameId = game.GameId,
+                    Status = (GameStatus)game.StatusId
+                };
+
+                _eventService.AddGameToEvent(gameItem);
+            }
+
+            foreach (var invite in model.EventInvites)
+            {
+                var inviteItem = new EventInvite()
+                {
+                    Id = 0,
+                    EventId = invite.EventId,
+                    UserId = invite.UserId,
+                    Responded = invite.Responded,
+                    Accepted = invite.Accepted,
+                    Attended = invite.Attending,
+                    DeclineComment = invite.DeclineComment,
+                    UpdatedOn = DateTime.Now
+                };
+
+                _eventService.AddInviteToEvent(inviteItem);
+            }
+
+            foreach (var task in model.Tasks)
+            {
+                var taskItem = new EventTask()
+                {
+                    Id = 0,
+                    EventId = model.EventId,
+                    UserId = task.UserId,
+                    Name = task.Name,
+                    Instructions = task.Description,
+                    CompletionComments = task.CompletionComments,
+                    CompletedOn = task.CompletedOn
+                };
+
+                _eventService.AddTask(taskItem);
+            }
 
         }
 
         public void DeleteEvent(int eventId)
         {
+            var eventObject = _eventService.GetEventById(eventId);
+
+            if (eventObject != null)
+            {
+                var eventGames = _eventService.GetGamesByEventId(eventId);
+                if (eventGames != null)
+                {
+                    foreach (var game in eventGames)
+                        _eventService.DeleteGameFromEventById(game.Id);
+                }
+
+                var eventInvites = _eventService.GetInvitesByEventId(eventId);
+                if (eventInvites != null)
+                {
+                    foreach (var invite in eventInvites)
+                        _eventService.DeleteInviteFromEventById(invite.Id);
+                }
+
+                var eventDates = _eventService.GetDateProposalByEventId(eventId);
+                if (eventDates != null)
+                {
+                    foreach (var eventDate in eventDates)
+                        _eventService.DeleteDateProposalFromEventById(eventDate.Id);
+                }
+
+                var eventAttachments = _eventService.GetAttachmentsByEventId(eventId);
+                if (eventAttachments != null)
+                {
+                    foreach (var attachment in eventAttachments)
+                        _eventService.DeleteAttachmentFromEventById(attachment.Id);
+                }
+
+                var eventTasks = _eventService.GetTasksByEventId(eventId);
+                if (eventTasks != null)
+                {
+                    foreach (var task in eventTasks)
+                        _eventService.DeleteTaskById(task.Id);
+                }
+
+                _eventService.DeleteEventById(eventId);
+            }
 
         }
 
-        public void AddUpdateEventInvitee(EventListViewModel.EventInvitee invitee)
+        public void AddUpdateEventInvitee(EventListViewModel.EventInvite invitee)
         {
-            var item = new EventUser()
+            var item = new EventInvite()
             {
                 EventId = invitee.EventId,
                 UserId = invitee.UserId,
@@ -257,12 +389,12 @@ namespace GamerAssistant.Web.Controllers
                 DeclineComment = null
             };
 
-            _eventService.AddUserToEvent(item);
+            _eventService.AddInviteToEvent(item);
         }
 
         public void DeleteEventInvitee(int eventInviteeId)
         {
-            _eventService.DeleteUserFromEventById(eventInviteeId);
+            _eventService.DeleteInviteFromEventById(eventInviteeId);
         }
 
         public void AddEventGame(EventListViewModel.Game game)
@@ -305,7 +437,7 @@ namespace GamerAssistant.Web.Controllers
             _eventService.DeleteTaskById(eventTaskId);
         }
 
-        public void AddEventProposedDates(EventListViewModel.DateOption proposedDate)
+        public void AddEventProposedDates(EventListViewModel.DateProposal proposedDate)
         {
             var item = new EventProposal()
             {
@@ -314,12 +446,12 @@ namespace GamerAssistant.Web.Controllers
                 OwnerId = proposedDate.OwnerId
             };
 
-            _eventService.AddDateOptionToEvent(item);
+            _eventService.AddDateProposalToEvent(item);
         }
 
         public void DeleteEventProposedDate(int eventDateId)
         {
-            _eventService.DeleteDateOptionFromEventById(eventDateId);
+            _eventService.DeleteDateProposalFromEventById(eventDateId);
         }
 
         public void AddUpdateEventAttachments(EventListViewModel.Attachment attachment)

@@ -19,7 +19,7 @@ namespace GamerAssistant.EntityFramework
         public virtual IDbSet<EventProposal> EventDateOptions { get; set; }
         public virtual IDbSet<EventGame> EventGames { get; set; }
         public virtual IDbSet<EventTask> EventTasks { get; set; }
-        public virtual IDbSet<EventUser> EventUsers { get; set; }
+        public virtual IDbSet<EventInvite> EventUsers { get; set; }
 
         public virtual IDbSet<Category> TabletopCategories { get; set; }
         public virtual IDbSet<Game> TabletopGames { get; set; }

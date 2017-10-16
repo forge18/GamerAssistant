@@ -1,11 +1,47 @@
-﻿<!-- Hidden inputs to pass parameters to knockout.js -->
+﻿@using System.Web.Optimization
+
+<!-- Hidden inputs to pass parameters to knockout.js -->
 <input type="hidden" id="UserId" name="UserId" value="@ViewBag.UserId" />
 
-<main>
-    @Html.Partial("~/Views/Games/GameList/_GameList.cshtml")
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
+    <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel="stylesheet">
+    <link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet" />
 
-    <script src="~/Scripts/vue.min.js"></script>
-    <script src="~/Scripts/v-mask.min.js"></script>
-    <script src="~/Scripts/vee-validate.min.js"></script>
-</main>
+    
+</head>
 
+<div id="app">
+    <v-app id="inspire" light>
+        <!--Toolbar-->
+        <v-toolbar fixed class="grey darken-4">
+            <v-spacer></v-spacer>
+            <v-avatar>
+                <img src="https://avatars0.githubusercontent.com/u/9064066?v=4&s=460" alt="">
+            </v-avatar>
+        </v-toolbar>
+
+        @Html.Partial("~/Views/Games/_Games.cshtml")
+
+        <!--Bottom nav for mobile-->
+        <v-bottom-nav class="grey darken-4">
+            <v-btn flat class="white--text" value="recent">
+                <span>Collection</span>
+                <v-icon>casino</v-icon>
+            </v-btn>
+            <v-btn flat class="white--text" value="nearby">
+                <span>Events</span>
+                <v-icon>event</v-icon>
+            </v-btn>
+            <v-btn flat class="white--text" value="nearby">
+                <span>Friends</span>
+                <v-icon>people</v-icon>
+            </v-btn>
+        </v-bottom-nav>
+    </v-app>
+</div>
+
+<script src="~/Scripts/jquery-2.2.0.js"></script>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/vuetify/dist/vuetify.min.js"></script>
+<script src="~/Views/Home/Index.js"></script>

@@ -124,7 +124,7 @@
     <Compile Include="Events\EventProposal.cs" />
     <Compile Include="Events\EventGame.cs" />
     <Compile Include="Events\EventTask.cs" />
-    <Compile Include="Events\EventUser.cs" />
+    <Compile Include="Events\EventInvite.cs" />
     <Compile Include="GamerAssistantConsts.cs" />
     <Compile Include="GamerAssistantCoreModule.cs" />
     <Compile Include="AppVersionHelper.cs" />

@@ -28,9 +28,11 @@ namespace GamerAssistant.Web.Models.Games
 
         public int MaxPlayers { get; set; }
 
+        public string PlayerRange { get; set; }
+
         public int YearPublished { get; set; }
 
-        public int PlayTime { get; set; }
+        public string PlayTime { get; set; }
 
         public string OwnerName { get; set; }
 
@@ -55,6 +57,8 @@ namespace GamerAssistant.Web.Models.Games
         public IList<Platform> Platforms { get; set; }
 
         public IList<PlayDate> PlayDates { get; set; }
+
+        public bool ShowDetails { get; set; }
 
 
         #region Nested Classes

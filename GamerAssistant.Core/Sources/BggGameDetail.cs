@@ -26,7 +26,14 @@ namespace GamerAssistant.Sources
 
             public List<MaxPlayers> MaxGamePlayers { get; set; }
 
+            public List<PlayingTime> PlayTime { get; set; }
+
             public List<Link> Links { get; set; }
+        }
+
+        public class PlayingTime
+        {
+            public string value { get; set; }
         }
 
         public class MinPlayers

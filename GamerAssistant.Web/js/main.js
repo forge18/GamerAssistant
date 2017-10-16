@@ -1,4 +1,9 @@
-﻿(function ($) {
+﻿import Vue from 'vue'
+import Vuetify from 'vuetify'
+ 
+Vue.use(Vuetify)
+
+(function ($) {
 
     //Notification handler
     abp.event.on('abp.notifications.received', function (userNotification) {

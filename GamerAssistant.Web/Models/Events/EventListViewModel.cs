@@ -8,13 +8,15 @@ namespace GamerAssistant.Web.Models.Events
         public EventListViewModel()
         {
             Attachments = new List<Attachment>();
-            DateOptions = new List<DateOption>();
+            DateProposals = new List<DateProposal>();
             Games = new List<Game>();
             Tasks = new List<Task>();
-            EventInvitees = new List<EventInvitee>();
+            EventInvites = new List<EventInvite>();
         }
 
         public int EventId { get; set; }
+
+        public string Title { get; set; }
 
         public string Description { get; set; }
 
@@ -36,13 +38,13 @@ namespace GamerAssistant.Web.Models.Events
 
         public IList<Attachment> Attachments { get; set; }
 
-        public IList<DateOption> DateOptions { get; set; }
+        public IList<DateProposal> DateProposals { get; set; }
 
         public IList<Game> Games { get; set; }
 
         public IList<Task> Tasks { get; set; }
 
-        public IList<EventInvitee> EventInvitees { get; set; }
+        public IList<EventInvite> EventInvites { get; set; }
 
 
 
@@ -63,7 +65,7 @@ namespace GamerAssistant.Web.Models.Events
             public string OwnerName { get; set; }
         }
 
-        public class DateOption
+        public class DateProposal
         {
             public int Id { get; set; }
 
@@ -110,7 +112,7 @@ namespace GamerAssistant.Web.Models.Events
             public DateTime CompletedOn { get; set; }
         }
 
-        public class EventInvitee
+        public class EventInvite
         {
             public int Id { get; set; }
 

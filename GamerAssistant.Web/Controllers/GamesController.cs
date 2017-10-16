@@ -120,9 +120,11 @@ namespace GamerAssistant.Web.Controllers
                 if (gameData != null)
                 {
                     //Prep the data points
-                    var minPlayers = gameData.MinPlayers.FirstOrDefault();
-                    var maxPlayers = gameData.MaxPlayers.FirstOrDefault();
-                    var yearPublished = gameData.YearPublished.FirstOrDefault();
+                    var minPlayers = Int32.Parse(gameData.MinPlayers);
+                    var maxPlayers = Int32.Parse(gameData.MaxPlayers);
+                    var playerRange = gameData.MinPlayers == gameData.MaxPlayers ? gameData.MinPlayers : String.Concat(gameData.MinPlayers, " - ", gameData.MaxPlayers);
+                    var playTime = gameData.PlayTime;
+                    var yearPublished = Int32.Parse(gameData.YearPublished);
 
                     //Create the model
                     var game = new GameViewModel()
@@ -133,10 +135,13 @@ namespace GamerAssistant.Web.Controllers
                         Description = gameData.Description,
                         MinPlayers = minPlayers,
                         MaxPlayers = maxPlayers,
+                        PlayerRange = playerRange,
+                        PlayTime = playTime,
                         YearPublished = yearPublished,
                         ImageUrl = gameData.Image,
                         IsExpansion = gameData.GameType == "BoardGameExpansion",
-                        ThumbnailUrl = gameData.ThumbnailImage
+                        ThumbnailUrl = gameData.ThumbnailImage,
+                        ShowDetails = false
                     };
 
                     //Add categories to the model
@@ -305,7 +310,7 @@ namespace GamerAssistant.Web.Controllers
                             YearPublished = game.YearGamePublished.Select(x => x.value).FirstOrDefault() ?? null,
                             MinPlayers = game.MinGamePlayers.Select(x => x.value).FirstOrDefault() ?? null,
                             MaxPlayers = game.MaxGamePlayers.Select(x => x.value).FirstOrDefault() ?? null,
-                            PlayTime = null,
+                            PlayTime = game.PlayTime.Select(x => x.value).FirstOrDefault() ?? null,
                             Image = game.Image,
                             ThumbnailImage = game.Thumbnail,
                             IsExpansion = gameType == "BoardGameExpansion",
@@ -642,6 +647,7 @@ namespace GamerAssistant.Web.Controllers
                 var name = item.Names.Select(x => x.value).FirstOrDefault();
                 var minPlayers = item.MinGamePlayers.Select(x => x.value).FirstOrDefault();
                 var maxPlayers = item.MaxGamePlayers.Select(x => x.value).FirstOrDefault();
+                var playTime = item.PlayTime.Select(x => x.value).FirstOrDefault();
                 var yearPublished = item.YearGamePublished.Select(x => x.value).FirstOrDefault();
 
                 //Create the model
@@ -653,10 +659,12 @@ namespace GamerAssistant.Web.Controllers
                     Description = item.Description,
                     MinPlayers = int.Parse(minPlayers),
                     MaxPlayers = int.Parse(maxPlayers),
+                    PlayTime = playTime,
                     ImageUrl = item.Image,
                     ThumbnailUrl = item.Thumbnail,
                     IsExpansion = gameType == "BoardGameExpansion",
-                    YearPublished = int.Parse(yearPublished)
+                    YearPublished = int.Parse(yearPublished),
+                    ShowDetails = false
                 };
 
                 //If the game is an expansion, find the parent game id
@@ -745,32 +753,41 @@ namespace GamerAssistant.Web.Controllers
         {
             //Create an empty string array
             IList<string> gameIds = new List<string>();
-            //Add each game's id to the list
-            foreach (var game in bggCollection.Items)
-            {
-                //Check to see if the game exists in the user's collection
-                var gameExistsInCollection = gameCollection.Any(x => x.GameId == game.ObjectId);
 
-                if (!gameExistsInCollection)
-                {
-                    //Add the game id to the string list
-                    string item = game.ObjectId.ToString();
-                    gameIds.Add(item);
-                }
-            };
-            //Add each game's id to the list
-            foreach (var game in bggSearch.Items)
+            if (bggCollection.Items != null)
             {
-                //Check to see if the game exists in the user's collection
-                var gameExistsInSearch = gameCollection.Any(x => x.GameId == game.Id);
-
-                if (!gameExistsInSearch)
+                //Add each game's id to the list
+                foreach (var game in bggCollection.Items)
                 {
-                    //Add the game id to the string list
-                    string item = game.Id.ToString();
-                    gameIds.Add(item);
-                }
-            };
+                    //Check to see if the game exists in the user's collection
+                    var gameExistsInCollection = gameCollection.Any(x => x.GameId == game.ObjectId);
+
+                    if (!gameExistsInCollection)
+                    {
+                        //Add the game id to the string list
+                        string item = game.ObjectId.ToString();
+                        gameIds.Add(item);
+                    }
+                };
+            }
+
+            if (bggSearch.Items != null)
+            {
+                //Add each game's id to the list
+                foreach (var game in bggSearch.Items)
+                {
+                    //Check to see if the game exists in the user's collection
+                    var gameExistsInSearch = gameCollection.Any(x => x.GameId == game.Id);
+
+                    if (!gameExistsInSearch)
+                    {
+                        //Add the game id to the string list
+                        string item = game.Id.ToString();
+                        gameIds.Add(item);
+                    }
+                };
+            }
+
             //Convert the game id list to a comma delimited string
             string gameIdsCombined = string.Join(",", gameIds);
 
