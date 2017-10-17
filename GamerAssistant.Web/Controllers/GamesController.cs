@@ -145,7 +145,7 @@ namespace GamerAssistant.Web.Controllers
                     };
 
                     //Add categories to the model
-                    var gameCategories = _gameService.GetCategoriesByGameId(item);
+                    var gameCategories = _gameService.GetCategoriesByGameId(item).ToList();
                     if (gameCategories != null)
                     {
                         foreach (var gameCategory in gameCategories)
@@ -160,7 +160,7 @@ namespace GamerAssistant.Web.Controllers
                     }
 
                     //Add expansions to the model
-                    var gameExpansions = _gameService.GetGamesList().Where(x => x.ParentGameId == game.Id);
+                    var gameExpansions = _gameService.GetGamesList().Where(x => x.SourceParentGameId == game.Id).ToList();
                     if (gameExpansions != null)
                     {
                         foreach (var gameExpansion in gameExpansions)
@@ -175,7 +175,7 @@ namespace GamerAssistant.Web.Controllers
                     }
 
                     //Add genres to the model
-                    var gameGenres = _gameService.GetGenresByGameId(item);
+                    var gameGenres = _gameService.GetGenresByGameId(item).ToList();
                     if (gameGenres != null)
                     {
                         foreach (var gameGenre in gameGenres)
@@ -190,7 +190,7 @@ namespace GamerAssistant.Web.Controllers
                     }
 
                     //Add mechanics to the model
-                    var gameMechanics = _gameService.GetMechanicsByGameId(item);
+                    var gameMechanics = _gameService.GetMechanicsByGameId(item).ToList();
                     if (gameMechanics != null)
                     {
                         foreach (var gameMechanic in gameMechanics)
@@ -205,7 +205,7 @@ namespace GamerAssistant.Web.Controllers
                     }
 
                     //Add platforms to the model
-                    var gamePlatforms = _gameService.GetPlatformsByGameId(item);
+                    var gamePlatforms = _gameService.GetPlatformsByGameId(item).ToList();
                     if (gamePlatforms != null)
                     {
                         foreach (var gamePlatform in gamePlatforms)
@@ -322,11 +322,11 @@ namespace GamerAssistant.Web.Controllers
                         {
                             var parentGameId = game.Links.Where(x => x.Type == "boardgameexpansion" && x.Inbound == "true").FirstOrDefault().Id;
                             if (parentGameId != null)
-                                gameToAdd.ParentGameId = int.Parse(parentGameId);
+                                gameToAdd.SourceParentGameId = int.Parse(parentGameId);
                         }
 
                         //Add the game to the database
-                        _gameService.AddGame(gameToAdd);
+                        var gameAdded = _gameService.AddGame(gameToAdd);
 
                         /*******************************************************************/
                         /*************************Add Categories****************************/
@@ -366,7 +366,7 @@ namespace GamerAssistant.Web.Controllers
                                     var gameCategoryToAdd = new GameCategory()
                                     {
                                         Id = 0,
-                                        GameId = int.Parse(game.Id),
+                                        GameId = gameAdded.Id,
                                         CategoryId = categoryId,
                                         CategoryName = category.value
                                     };
@@ -413,7 +413,7 @@ namespace GamerAssistant.Web.Controllers
                                     var gameGenreToAdd = new GameGenre()
                                     {
                                         Id = 0,
-                                        GameId = int.Parse(game.Id),
+                                        GameId = gameAdded.Id,
                                         GenreId = genreId,
                                         GenreName = genre.value
                                     };
@@ -461,7 +461,7 @@ namespace GamerAssistant.Web.Controllers
                                     //Add the mechanic to the game
                                     var gameMechanicToAdd = new GameMechanic()
                                     {
-                                        GameId = int.Parse(game.Id),
+                                        GameId = gameAdded.Id,
                                         MechanicId = mechanicId,
                                         MechanicName = mechanic.value
                                     };
@@ -512,7 +512,7 @@ namespace GamerAssistant.Web.Controllers
                                     var gamePlatformToAdd = new GamePlatform()
                                     {
                                         Id = 0,
-                                        GameId = int.Parse(game.Id),
+                                        GameId = gameAdded.Id,
                                         PlatformId = platformId,
                                         PlatformName = platform.value
                                     };
@@ -526,7 +526,7 @@ namespace GamerAssistant.Web.Controllers
                         {
                             Id = 0,
                             UserId = userId,
-                            GameId = int.Parse(game.Id),
+                            GameId = gameAdded.Id,
                             AddedOn = DateTime.Now
                         };
                         _userService.AddGameToUser(userGame);

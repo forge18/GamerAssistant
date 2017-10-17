@@ -136,3 +136,4 @@ D:\src\GamerAssistant\GamerAssistant.EntityFramework\obj\Debug\GamerAssistant.Mi
 D:\src\GamerAssistant\GamerAssistant.EntityFramework\obj\Debug\GamerAssistant.Migrations.RemoveLocationFromProposal.resources
 D:\src\GamerAssistant\GamerAssistant.EntityFramework\obj\Debug\GamerAssistant.Migrations.AddRespondedToEventUser.resources
 D:\src\GamerAssistant\GamerAssistant.EntityFramework\obj\Debug\GamerAssistant.Migrations.UpdateEventInviteEntity.resources
+D:\src\GamerAssistant\GamerAssistant.EntityFramework\obj\Debug\GamerAssistant.Migrations.ChangeParentGameIdName.resources

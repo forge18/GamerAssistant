@@ -29,7 +29,7 @@ namespace GamerAssistant.Games
 
         public bool IsExpansion { get; set; }
 
-        public int ParentGameId { get; set; }
+        public int SourceParentGameId { get; set; }
 
         public DateTime AddedOn { get; set; }
     }

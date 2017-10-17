@@ -51,7 +51,7 @@ namespace GamerAssistant.Games
 
         public IList<GameCategory> GetCategoriesByGameId(int gameId)
         {
-            var gameCategories = _gameCategoryRepository.GetAll().Where(x => x.Id == gameId).ToList();
+            var gameCategories = _gameCategoryRepository.GetAll().Where(x => x.GameId == gameId).ToList();
 
             if (gameCategories == null)
                 return null;
@@ -61,7 +61,7 @@ namespace GamerAssistant.Games
 
         public IList<GameMechanic> GetMechanicsByGameId(int gameId)
         {
-            var gameMechanics = _gameMechanicRepository.GetAll().Where(x => x.Id == gameId).ToList();
+            var gameMechanics = _gameMechanicRepository.GetAll().Where(x => x.GameId == gameId).ToList();
 
             if (gameMechanics == null)
                 return null;
@@ -91,7 +91,7 @@ namespace GamerAssistant.Games
 
         public Game GetGameById(int gameId)
         {
-            var game = _gameRepository.GetAll().FirstOrDefault(x => x.TabletopSourceGameId == gameId);
+            var game = _gameRepository.GetAll().FirstOrDefault(x => x.Id == gameId);
 
             if (game == null)
                 return null;
@@ -139,9 +139,11 @@ namespace GamerAssistant.Games
             return platform;
         }
 
-        public void AddGame(Game game)
+        public Game AddGame(Game game)
         {
             _gameRepository.InsertAndGetId(game);
+
+            return game;
         }
 
         public void UpdateGame(Game game)

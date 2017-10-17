@@ -1,16 +1,16 @@
 ﻿<main class="pt-3">
     <!--Games Lists Tab-->
-    <v-tabs fixed centered class="pt-5" scrollable>
+    <v-tabs fixed centered class="pt-5" :scrollable="false">
         <v-tabs-bar class="transparent">
             <v-tabs-item v-for="tab in tabs" :key="tab" :href="'#' + tab">{{ tab }}</v-tabs-item>
             <v-tabs-slider class="yellow"></v-tabs-slider>
         </v-tabs-bar>
 
         <v-tabs-items>
-            <v-tabs-content fluid grid-list-xl class="pt-1" :id="'My Games'">
+            <v-tabs-content fluid grid-list-xl lazy class="pt-1" :id="'My Games'">
                 <v-layout row wrap justify-center class="pa-3">
 
-                    <v-flex class="pa-3" lg3 md4 sm6 xs12 v-for="game in games.BggGames" :key="game.id">
+                    <v-flex class="pa-3" lg4 md6 sm12 xs12 v-for="game in games.BggGames" :key="game.id">
                         <v-card>
 
                             <v-card-media :src="game.ImageUrl" height="120px" @@click.native="game.ShowDetails = !game.ShowDetails">
@@ -21,24 +21,53 @@
 
                             <v-slide-y-transition>
                                 <v-card-text v-show="game.ShowDetails">
-                                    <v-content fluid grid-list-xs>
-                                        <v-layout row>
-                                            <v-flex xs4>
-                                                <div><v-icon style="padding-bottom: 0.5em">fa-users</v-icon></div>
-                                                <div><v-icon style="padding-bottom: 1em">fa-clock-o</v-icon></div>
-                                                <div><span v-text="'Year Published: '"></span></div>
+                                    <v-content fluid grid-list-sm class="pb-1">
+                                        <v-layout row wrap justify-center >
+                                            <v-flex xs4 class="text-xs-center">
+                                                <v-icon medium>people</v-icon>
+                                            </v-flex>
+                                            <v-flex xs4 class="text-xs-center">
+                                                <v-icon medium>schedule</v-icon>
+                                            </v-flex>
+                                            <v-flex xs4 class="text-xs-center">
+                                                <v-icon medium>favorite_border</v-icon>
                                             </v-flex>
                                         </v-layout>
                                     </v-content>
-                                    <v-flex xs4>
-                                        <div><span v-text="': ' + game.PlayerRange + ' players'"></span></div>
-                                        <div><span v-text="': ' + game.PlayTime + ' minutes'"></span></div>
-                                        <div><span v-text="game.YearPublished"></span></div>
-                                    </v-flex>
- 
-                                    
-                                    <span v-text="'Expansion: ' + game.IsExpansion"></span><br />
-                                    <span v-text="game.Description"></span>
+                                    <v-content fluid grid-list-sm class="pb-2">
+                                        <v-layout row wrap justify-center>
+                                            <v-flex xs4 class="text-xs-center">
+                                                <span v-text="game.PlayerRange + ' players'"></span>
+                                            </v-flex>
+                                            <v-flex xs4 class="text-xs-center">
+                                                <span v-text="game.PlayTime + ' minutes'"></span>
+                                            </v-flex>
+                                            <v-flex xs4 class="text-xs-center">
+
+                                            </v-flex>
+                                        </v-layout>
+                                    </v-content>
+
+                                    <v-content>
+                                        <span style="font-weight: bold">Description</span>
+                                        <br />
+                                        <a>Read More</a>
+                                    </v-content>
+
+                                    <v-content>
+                                        <span style="font-weight: bold">Categories</span>
+                                        <br />
+                                        <v-chip small label outline color="cyan" v-for="category in game.Categories">{{ category.Name }}</v-chip>
+                                    </v-content>
+
+                                    <v-content>
+                                        <span style="font-weight: bold">Mechanics</span>
+                                        <br />
+                                        <v-chip small label outline color="black" v-for="mechanic in game.Mechanics">{{ mechanic.Name }}</v-chip>
+                                    </v-content>
+
+                                    @*<span v-text="'Expansion: ' + game.IsExpansion"></span><br />
+                                    <span v-text="game.Description"></span>*@
                                 </v-card-text>
                             </v-slide-y-transition>
 

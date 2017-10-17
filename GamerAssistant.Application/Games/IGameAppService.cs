@@ -30,7 +30,7 @@ namespace GamerAssistant.Games
 
         int GetMechanicByName(string name);
 
-        void AddGame(Game game);
+        Game AddGame(Game game);
 
         void UpdateGame(Game game);
 
